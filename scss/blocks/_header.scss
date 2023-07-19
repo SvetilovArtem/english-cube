@@ -1,0 +1,199 @@
+#header {
+    padding: 40px 0 0 0;
+    z-index: 25;
+    background-image: 
+    url(../icons/main-page/banner/girl_&_boy.svg),
+    url(../icons/main-page/banner/red-phone.svg),
+    url(../icons/main-page/banner/red-line.svg),
+    url(../icons/main-page/banner/wheel.svg),
+    url(../icons/main-page/banner/do-you-speak.svg),
+    url(../icons/main-page/banner/blue-structure.svg),
+    url(../img/main-page/checkered-sheet.jpg);
+
+    background-size: 578px 470px, 175px 298px, 437px 66px, 287px 290px, 136px 110px, 996px 894px, cover;
+    background-position:
+        top 239px left calc(50% + 320px), 
+        top 360px left calc(50% + 670px), 
+        bottom 20px left calc(50% + 790px), 
+        top 270px left calc(50% + 750px),
+        top 159px left calc(50% + 620px),
+        top 69px left calc(50% + 420px),
+        50%;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    @media (max-width: 1250px) {
+        background-image: 
+        url(../icons/main-page/banner/students-tablet.svg),
+        url(../icons/main-page/banner/red-phone-tablet.svg),
+        url(../icons/main-page/banner/red-line-tablet.svg),
+        url(../icons/main-page/banner/wheel-tablet.svg),
+        url(../icons/main-page/banner/do-you-speak-tablet.svg),
+        url(../icons/main-page/banner/blue-structure-tablet.svg),
+        url(../img/main-page/checkered-sheet.jpg);
+    
+        background-size: 375px 306px, 114px 194px, 284px 43px, 186px 188px, 88px 72px, 647px 580px, cover;
+        background-position:
+            top 210px left calc(50% + 20px), 
+            top 280px left calc(50% + 280px), 
+            bottom 20px left calc(50% + 300px), 
+            top 230px left calc(50% + 310px),
+            top 149px left calc(50% + 215px),
+            top 69px left calc(50% + 150px),
+            50%;
+    }
+    @media (max-width: 450px) {
+        background-image: 
+        url(../icons/main-page/banner/students-mobile.svg),
+        url(../icons/main-page/banner/red-phone-mobile.svg),
+        url(../icons/main-page/banner/red-line-mobile.svg),
+        url(../icons/main-page/banner/wheel-mobile.svg),
+        url(../icons/main-page/banner/do-you-speak-mobile.svg),
+        url(../icons/main-page/banner/blue-structure-mobile.svg),
+        url(../img/main-page/checkered-sheet.jpg);
+    
+        background-size: 214px 175px, 65px 111px, 162px 24px, 106px 108px, 50px 41px, 369px 332px, cover;
+        background-position:
+            top 510px left calc(50% - 50px), 
+            top 540px left calc(50% + 120px), 
+            bottom 30px left calc(50% + 130px), 
+            top 510px left calc(50% + 145px),
+            top 469px left calc(50% + 75px),
+            top 369px left calc(50% + 40px),
+            50%;
+    }
+    @include header;
+    @media (max-width: 450px) {
+        padding: 10px 0 227px 0;
+    }
+
+
+    .banner {
+        padding: 80px 0;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        position: relative;
+        
+        margin: 0 auto;
+        @media (max-width: 767px) {
+            // grid-template-columns: 1fr;
+        }
+        .container {
+
+        }
+        @media (max-width: 1250px) {
+            padding: 30px 0 49px 0;
+        }
+        @media (max-width: 767px) {
+            padding: 30px 0 49px 0;
+        }
+        .banner-left {
+            max-width: 594px;
+            @media (max-width: 1250px) {
+                max-width: 279px;
+            }
+
+            .banner-title {
+                max-width: 535px;
+                font-size: 54px;
+                line-height: 1;
+                font-weight: 500;
+                margin-bottom: 76px;
+                .banner-title__light {
+                    color: $light-green;
+                }
+                @media (max-width: 1250px) {
+                    font-size: 42px;
+                    margin-bottom: 33px;
+                    width: 424px;
+                }
+                @media (max-width: 450px) {
+                    max-width: 279px;
+                    width: 100%;
+                    margin-bottom: 12px;
+                    font-size: 28px;
+                }
+            }
+            .banner-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 46px;
+                row-gap: 16px;
+                margin-bottom: 70px;
+                @media (max-width: 1250px) {
+                    grid-template-columns: 1fr;
+                    margin-bottom: 22px;
+                    row-gap: 9px;
+                    column-gap: 0;
+                }
+                @media (max-width: 467px) {
+                    row-gap: 6px;
+                    margin-bottom: 12px;
+                }
+                .banner-item {
+                    padding-left: 58px;
+                    min-height: 50px;
+                    @media (max-width: 1250px) {
+                        max-width: calc(58px + 176px);
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                    }
+                    @media (max-width: 450px) {
+                        padding-left: 44px;
+                        max-width: 279px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                    }
+                    &:nth-child(1) {
+                        background: url(../icons/main-page/toys-icon.svg) no-repeat;
+                        background-size: 50px 50px;
+                        background-position: left center;
+                        @media (max-width: 1250px) {
+                            grid-row: 1/2;
+                        }
+                        @media (max-width: 650px) {
+                            background-size: 36px 36px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        background: url(../icons/main-page/teacher.svg) no-repeat;
+                        background-size: 50px 50px;
+                        background-position: left center;
+                        @media (max-width: 1250px) {
+                            grid-row: 4/5;
+                        }
+                        @media (max-width: 650px) {
+                            background-size: 36px 36px;
+                        }
+                    }
+                    &:nth-child(3) {
+                        background: url(../icons/main-page/books.svg) no-repeat;
+                        background-size: 50px 50px;
+                        background-position: left center;
+                        @media (max-width: 1250px) {
+                            grid-row: 2/3;
+                        }
+                        @media (max-width: 650px) {
+                            background-size: 36px 36px;
+                        }
+                    }
+                    &:nth-child(4) {
+                        background: url(../icons/main-page/students.svg) no-repeat;
+                        background-size: 50px 50px;
+                        background-position: left center;
+                        @media (max-width: 1250px) {
+                            grid-row: 3/4;
+                        }
+                        @media (max-width: 650px) {
+                            background-size: 36px 36px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .banner-right {
+
+        }
+    }
+}

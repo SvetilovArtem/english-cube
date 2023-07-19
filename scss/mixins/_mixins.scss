@@ -1,0 +1,413 @@
+@mixin social-item {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 11px;
+    left: 11px;
+    width: 26px;
+    height: 26px;
+    @media (max-width: 1250px) {
+        width: 16px;
+        height: 16px;
+        top: 9px;
+        left: 9px;
+    }
+    @media (max-width: 767px) {
+        width: 12px;
+        height: 12px;
+        top: 7px;
+        left: 7px;
+    }
+}
+
+@mixin header {
+    position: relative;
+    z-index: 5;
+    @media (max-width: 1250px) {
+        padding: 10px 0 0px 0;
+    }
+
+    .container-max {
+        max-width: 1226px;
+        padding: 0 10px;
+        margin: 0 auto;
+        position: relative;
+        @media (max-width: 1250px) {
+            max-width: 768px;
+        }
+        .header-nav {
+            padding: 9px 26px 9px 30px;
+            border-radius: 10px;
+            border: 1px solid #CBE2EF;
+            background: #FFF;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media (max-width: 1250px) {
+                padding: 5px 17px 2px 11px;
+            }
+            @media (max-width: 767px) {
+                display: none;
+            }
+            .header-logo {
+                width: 78px;
+                height: 82px;
+                @media (max-width: 1250px) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .nav-list {
+                display: flex;
+                align-items: center;
+                gap: 22px;
+                margin-right: 53px;
+                .nav-item {
+                    transition: all .3s ease-in-out;
+                    @media (max-width: 1250px) {
+                        font-size: 10px;
+                    }
+                    &:hover a {
+                        color: $light-green;
+                    }
+                }
+                @media (max-width: 1250px) {
+                    margin-right: 15px;
+                    gap: 12px;
+                }
+            }
+            .socials-list {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                .socials-item {
+                    position: relative;
+                    background-color: $orange;
+                    border-radius: 10px;
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all .3s ease-in-out;
+                    cursor: pointer;
+                    @media (max-width: 1250px) {
+                        width: 34px;
+                        height: 34px;
+                    }
+                    &:hover {
+                        background-color: $light-green;
+                    }
+                    &:nth-child(1)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/phone.svg) 50%/cover no-repeat;
+                    }
+                    &:nth-child(2)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/telegram.svg) 50%/cover no-repeat;
+                    }
+                    &:nth-child(3)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/viber.svg) 50%/cover no-repeat;
+                    }
+                    &:nth-child(4)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/whatsapp.svg) 50%/cover no-repeat;
+                    }
+    
+                }
+            }
+        }
+        .order-modal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 260px;
+            left: calc(50% - 313px);
+            width: 626px;
+            height: 407px;
+            z-index: 35;
+            border-radius: 10px;
+            border: 2px solid #D6FFDC;
+            background: #E8FCEB;
+            overflow: hidden;
+            transform: translateY(-300%);
+            transition: transform .5s ease-in-out;
+
+            @media (max-width: 690px) {
+                top: 150px;
+                left: calc(50% - 150px);
+                width: 300px;
+            }
+            .order-modal__title {
+                font-size: 24px;
+                margin-bottom: 20px;
+                max-width: 306px;
+                @media (max-width: 690px) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+            .form-order {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+                padding: 50px 5px 40px 5px;
+                .close-button {
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    width: 32px;
+                    height: 32px;
+                    background: url(../icons/main-page/close-button.svg) 50%/cover no-repeat;
+                    cursor: pointer;
+                    transition: all .4s ease-in-out;
+                    &:hover {
+                        transform: rotate(360deg);
+                    }
+                    @media (max-width: 690px) {
+                        top: 10px;
+                        right: 10px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .input-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    width: 470px;
+                    @media (max-width: 690px) {
+                        width: 100%;
+                    }
+                    &:last-child {
+                        margin-bottom: 16px;
+                    }
+                    label {
+                        display: block;
+                        text-align: left;
+                        width: 100%;
+                    }
+                    input {
+                        border-radius: 8px;
+                        border: 1px solid $light-green;
+                        height: 38px;
+                        width: 100%;
+                        padding: 11px 20px;
+
+                    }
+                }
+                .form-agreement {
+                    font-size: 12px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .order-modal--active {
+            transform: translateY(0);
+        }
+        .thanks-modal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 260px;
+            left: calc(50% - 313px);
+            width: 626px;
+            height: 203px;
+            z-index: 35;
+            border-radius: 10px;
+            border: 2px solid #D6FFDC;
+            background: #E8FCEB;
+            overflow: hidden;
+            transform: translateY(-300%);
+            transition: transform .5s ease-in-out;
+            @media (max-width: 690px) {
+                top: 150px;
+                left: calc(50% - 150px);
+                width: 300px;
+            }
+            .thanks-modal__title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .thanks-modal__text {
+                font-size: 20px;
+            }
+            .close-button {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 32px;
+                height: 32px;
+                background: url(../icons/main-page/close-button.svg) 50%/cover no-repeat;
+                cursor: pointer;
+                transition: all .4s ease-in-out;
+                &:hover {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        .thanks-modal--active {
+            transform: translateY(0);
+        }
+        .menu-hidden {
+            position: fixed;
+            z-index: 25;
+            top: 0px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            padding: 77px 0 0 21px;
+            transform: translateY(-300%);
+            transition: all .5s ease-in-out;
+            background-image: url(../img/main-page/checkered-sheet.jpg);
+            background-repeat: repeat;
+            .menu-hidden__nav {
+                margin-bottom: 20px;
+                .menu-hidden__list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+            .primary-btn {
+                font-size: 14px;
+                line-height: 17px;
+                width: 143px;
+                padding: 8px 12px;
+            }
+        }
+        .menu-hidden--active {
+            transform: translateY(0);
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.50);
+            width: 100%;
+            height: 100%;
+            z-index: 27;
+            transform: translateY(-300%);
+            transition: transform .5s ease-in-out;
+        }
+        .overlay--active {
+            transform: translateY(0);
+        }
+    }
+    .header-wrapper__mobile {
+        display: none;
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid #CBE2EF;
+        background: #FFF;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        padding: 4px 9px 7px 4px;
+        z-index: 26;
+        width: 100%;
+        margin: 0 auto;
+        @media (max-width: 767px) {
+            display: block;
+        }
+        .header-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // gap: 43px;
+            .header-mobile__logo {
+                width: 30px;
+                height: 32px;
+            }
+            .menu-btn {
+                padding: 10px 7px;
+                background-color: $light-green;
+                width: 26px;
+                height: 26px;
+                border-radius: 5px;
+                transition: all .3s ease-in-out;
+                &:hover {
+                    background-color: $green;
+                }
+                .menu-burger {
+                    display: block;
+                    width: 12px;
+                    height: 1px;
+                    background-color: $white;
+                    position: relative;
+                    left: calc(50% - 6px);
+                    top: calc(50% - 3px);
+                    &::after {
+                        position: absolute;
+                        top: 3px;
+                        left: 0;
+                        background-color: $white;
+                        width: 12px;
+                        height: 1px;
+                        content: '';
+                    }
+                    &::before {
+                        position: absolute;
+                        bottom: 3px;
+                        left: 0;
+                        background-color: $white;
+                        width: 12px;
+                        height: 1px;
+                        content: '';
+                    }
+                }
+            }
+            .socials-list {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                .socials-item {
+                    position: relative;
+                    background-color: $orange;
+                    border-radius: 5px;
+                    width: 26px;
+                    height: 26px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all .3s ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $light-green;
+                    }
+                    &:nth-child(1)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/phone.svg) 50%/cover no-repeat;
+                    }
+                    &:nth-child(2)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/telegram.svg) 50%/cover no-repeat;
+                    }
+                    &:nth-child(3)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/viber.svg) 50%/cover no-repeat;
+                    }
+                    &:nth-child(4)::before {
+                        @include social-item;
+                        background: url(../icons/main-page/whatsapp.svg) 50%/cover no-repeat;
+                    }
+    
+                }
+            }
+        }
+    }
+}

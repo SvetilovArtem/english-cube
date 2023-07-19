@@ -1,0 +1,60 @@
+#methodics-section {
+    padding: 100px 0;
+    background: url(../img/main-page/checkered-sheet.jpg) 50%/cover no-repeat;
+    @media (max-width: 1250px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767px) {
+        padding: 20px 0;
+    }
+    .methodics {
+        .section-title {
+            margin-bottom: 50px;
+            @media (max-width: 1250px) {
+                margin-bottom: 18px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .methodics-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 54px;
+            @media (max-width: 1250px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: 450px) {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+            .methodics-item {   
+                .methodics-item__img {
+                    border-radius: 10px;
+                    margin-bottom: 12px;
+                    @media (max-width: 767px) {
+                        margin-bottom: 8px;
+                    }
+                }
+                .methodics-item__desc {
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-align: center;
+                    line-height: 24px;
+                    @media (max-width: 1250px) {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

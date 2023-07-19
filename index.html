@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="scss/main.css">
+    <title>English Cube</title>
+</head>
+<body>
+    <header id="header">
+            <div class="container-max">
+                <nav class="header-nav">
+                    <a href="#" class="header-logo__link">
+                        <img src="icons/main-page/english-cube-logo.svg" alt="English Cube logo" class="header-logo">
+                    </a>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Галерея</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Программы</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Методика</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Отзывы</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+                    </ul>
+                    <div class="socials-list">
+                        <a href="tel:+375255002464" class="socials-item"></a>
+                        <a href="tg://resolve?domain=agvento-test" class="socials-item"></a>
+                        <a href="viber://chat?number=%2B375255002464" class="socials-item"></a>
+                        <a href="https://wa.me/375255002464" class="socials-item"></a>
+                    </div>
+                    <button class="primary-btn">Заказать звонок</button>
+                </nav>
+                <div class="header-wrapper__mobile">
+                    <div class="header-mobile">
+                        <img src="icons/main-page/english-cube-logo.svg" alt="" class="header-mobile__logo">
+                        <div class="socials-list">
+                            <a href="tel:+375255002464" class="socials-item"></a>
+                            <a href="tg://resolve?domain=agvento-test" class="socials-item"></a>
+                            <a href="viber://chat?number=%2B375255002464" class="socials-item"></a>
+                            <a href="https://wa.me/375255002464" class="socials-item"></a>
+                        </div>
+                        <button class="menu-btn">
+                            <span class="menu-burger"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="order-modal">
+                    <form action="#" class="form-order">
+                        <h3 class="order-modal__title">
+                            Оставьте ваши данные, и мы вам перезвоним!
+                        </h3>
+                        <div class="close-button"></div>
+                        <div class="input-block">
+                            <label for="">Телефон*</label>
+                            <input type="text" placeholder="Введите телефон">
+                        </div>
+                        <div class="input-block">
+                            <label for="">ФИО*</label>
+                            <input type="text" placeholder="Введите имя">
+                        </div>
+                        <div class="form-agreement">
+                            Заполняя форму, вы даёте согласие на обработку персональных данных
+                        </div>
+                        <button class="primary-btn">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+                <div class="thanks-modal">
+                    <div class="thanks-modal__title">Спасибо!</div>
+                    <div class="thanks-modal__text"></div>
+                    <div class="close-button"></div>
+                </div>
+                <div class="menu-hidden">
+                    <nav class="menu-hidden__nav">
+                        <ul class="menu-hidden__list">
+                            <li class="menu-hidden__item">
+                                <a href="#" class="menu-hidden__link">О нас</a>
+                            </li>
+                            <li class="menu-hidden__item">
+                                <a href="#" class="menu-hidden__link">Галерея</a>
+                            </li>
+                            <li class="menu-hidden__item">
+                                <a href="#" class="menu-hidden__link">Программы</a>
+                            </li>
+                            <li class="menu-hidden__item">
+                                <a href="#" class="menu-hidden__link">Методика</a>
+                            </li>
+                            <li class="menu-hidden__item">
+                                <a href="#" class="menu-hidden__link">Отзывы</a>
+                            </li>
+                            <li class="menu-hidden__item">
+                                <a href="#" class="menu-hidden__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="primary-btn">Заказать звонок</button>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="banner">
+                <div class="container">
+                    <div class="banner-left">
+                        <h1 class="banner-title">Английский язык <span class="banner-title__light">для детей</span></h1>
+                        <ul class="banner-list">
+                            <li class="banner-item">Игровая форма обучения</li>
+                            <li class="banner-item">Высокопрофессиональные педагоги</li>
+                            <li class="banner-item">Уникальная методика преподавания</li>
+                            <li class="banner-item">Мини-группы (до 6 человек)</li>
+                        </ul>
+                        <a href="#connection-section" class="primary-btn">Записаться на обучение</a>
+                    </div>
+                    <div class="banner-right">
+                    </div>  
+                </div>    
+                
+            </div>
+    </header>
+    <main>
+        <section id="about-section">
+            <div class="container">
+                <div class="about about--desktop">
+                    <h2 class="section-title">Почему мы?</h2>
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <p>Нацеленность на результат</p>
+                            <img src="icons/main-page/target.svg" alt="" class="about-item__img">
+                        </li>
+                        <li class="about-item">
+                            <img src="icons/main-page/student_girl.svg" alt="" class="about-item__img">
+                            <p>Индивидуальный подход к каждому ученику</p>
+                        </li>
+                        <li class="about-item">
+                            <p>Творческие мастер-классы и вечеринки</p>
+                            <img src="icons/main-page/party.svg" alt="" class="about-item__img">
+                        </li>
+                        <li class="about-item">
+                            <p>Коммуникативная методика</p>
+                            <img src="icons/main-page/speak-yes-done.svg" alt="" class="about-item__img">
+                        </li>
+                        <li class="about-item">
+                            <p>Дружелюбная атмосфера на занятии</p>
+                            <img src="icons/main-page/children.svg" alt="" class="about-item__img">
+                        </li>
+                        <li class="about-item">
+                            <img src="icons/main-page/student_boy.svg" alt="" class="about-item__img">
+                            <p>Ваш ребёнок полюбит английский язык</p>
+                        </li>
+                        <li class="about-item">
+                            <img src="icons/main-page/i-love-english.svg" alt="" class="about-item__img">
+                            <p>Полезное хобби</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about--mobile">
+                    <h2 class="section-title">Почему мы?</h2>
+                    <ul class="about-list">
+                        <div class="first-block">
+                            <li class="about-item">
+                                <p>Нацеленность на результат</p>
+                                <img src="icons/main-page/target.svg" alt="" class="about-item__img">
+                            </li>
+                            <li class="about-item">
+                                <img src="icons/main-page/student_girl.svg" alt="" class="about-item__img">
+                                <p>Индивидуальный подход к каждому ученику</p>
+                            </li>
+                        </div>
+                        <div class="second-block">
+                            <div>
+                                <li class="about-item">
+                                    <p>Коммуникативная методика</p>
+                                    <img src="icons/main-page/speak-yes-done.svg" alt="" class="about-item__img">
+                                </li>
+                                <li class="about-item">
+                                    <img src="icons/main-page/i-love-english.svg" alt="" class="about-item__img">
+                                    <p>Полезное хобби</p>
+                                </li>
+                            </div>
+                            <li class="about-item">
+                                <p>Дружелюбная атмосфера на занятии</p>
+                                <img src="icons/main-page/children.svg" alt="" class="about-item__img">
+                            </li>
+                        </div>
+                        <div class="third-block">
+                            <li class="about-item">
+                                <p>Творческие мастер-классы и вечеринки</p>
+                                <img src="icons/main-page/party.svg" alt="" class="about-item__img">
+                            </li>
+                            <li class="about-item">
+                                <img src="icons/main-page/student_boy.svg" alt="" class="about-item__img">
+                                <p>Ваш ребёнок полюбит английский язык</p>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="teachers-section">
+            <div class="container">
+                <div class="teachers">
+                    <h2 class="section-title">Преподаватели</h2>
+                    <blockquote class="teachers-quote">
+                        <div class="quote-text">Учитель — человек, который может делать трудные вещи лёгкими.</div>
+                        <div class="quote-author">Р.У. Эмерсон</div>
+                    </blockquote>
+                    <div class="teachers-list">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="teacher-slide desktop">
+                                        <div class="teacher-info">
+                                            <img src="img/main-page/teacher-avatar-1.jpg" class="teacher-avatar" alt="Teacher avatar">
+                                            <div class="teacher-name">Маргарита Эдуардовна</div>
+                                            <div class="teacher-text">
+                                                Основатель студии и преподаватель
+                                            </div>
+                                        </div>
+                                        <div class="teacher-about">
+                                            <div class="teacher-about__title">О себе</div>
+                                            <div class="teacher-about__text">
+                                                <p class="teacher-about__paragraph">
+                                                    При обучении английскому языку делаю упор на последовательное обучение (от простого к сложному).
+                                                </p>
+                                                <p class="teacher-about__paragraph">
+                                                    На занятиях большое внимание уделяю расширению словарного запаса, тренировке правильного произношения и коммуникативному взаимодействию.
+                                                </p>
+                                                <p class="teacher-about__paragraph">
+                                                    Активно использую игровую методику, для меня самое главное — это заинтересовать и замотивировать ребёнка.
+                                                </p>
+                                                <p class="teacher-about__paragraph">
+                                                    Стараюсь сделать занятия активными, творческими и интересными.
+                                                </p>
+                                            </div>
+                                            <ul class="teacher-benefits">
+                                                <li class="teacher-benefit">
+                                                    <div class="teacher-benefit__number">
+                                                        <span>7</span> лет
+                                                    </div>
+                                                    <div class="teacher-benefit__descr">
+                                                        педагогического стажа
+                                                    </div>
+                                                </li>
+                                                <li class="teacher-benefit">
+                                                    <div class="teacher-benefit__number">
+                                                        <span>100 +</span>
+                                                    </div>
+                                                    <div class="teacher-benefit__descr">
+                                                        англоговорящих учеников
+                                                    </div>
+                                                </li>
+                                                <li class="teacher-benefit">
+                                                    <div class="teacher-benefit__number">
+                                                        <span>95</span>%
+                                                    </div>
+                                                    <div class="teacher-benefit__descr">
+                                                        учеников продолжают обучение со мной
+                                                    </div>
+                                                </li>
+                                                <li class="teacher-benefit">
+                                                    <div class="teacher-benefit__number">
+                                                        <span>9,5</span>
+                                                    </div>
+                                                    <div class="teacher-benefit__descr">
+                                                        средний возраст учеников
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-slide mobile">
+                                        <div class="teacher-wrapper">
+                                            <div class="teacher-info">
+                                                <img src="img/main-page/teacher-avatar-1.jpg" class="teacher-avatar" alt="Teacher avatar">
+                                                <div class="teacher-name">Маргарита Эдуардовна</div>
+                                                <div class="teacher-text">
+                                                    Основатель студии и преподаватель
+                                                </div>
+                                            </div>
+                                            <div class="teacher-about">
+                                                <div class="teacher-about__title">О себе</div>
+                                                <div class="teacher-about__text">
+                                                    <p class="teacher-about__paragraph">
+                                                        При обучении английскому языку делаю упор на последовательное обучение (от простого к сложному).
+                                                    </p>
+                                                    <p class="teacher-about__paragraph">
+                                                        На занятиях большое внимание уделяю расширению словарного запаса, тренировке правильного произношения и коммуникативному взаимодействию.
+                                                    </p>
+                                                    <p class="teacher-about__paragraph">
+                                                        Активно использую игровую методику, для меня самое главное — это заинтересовать и замотивировать ребёнка.
+                                                    </p>
+                                                    <p class="teacher-about__paragraph">
+                                                        Стараюсь сделать занятия активными, творческими и интересными.
+                                                    </p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <ul class="teacher-benefits">
+                                            <li class="teacher-benefit">
+                                                <div class="teacher-benefit__number">
+                                                    <span>7</span> лет
+                                                </div>
+                                                <div class="teacher-benefit__descr">
+                                                    педагогического стажа
+                                                </div>
+                                            </li>
+                                            <li class="teacher-benefit">
+                                                <div class="teacher-benefit__number">
+                                                    <span>100 +</span>
+                                                </div>
+                                                <div class="teacher-benefit__descr">
+                                                    англоговорящих учеников
+                                                </div>
+                                            </li>
+                                            <li class="teacher-benefit">
+                                                <div class="teacher-benefit__number">
+                                                    <span>95</span>%
+                                                </div>
+                                                <div class="teacher-benefit__descr">
+                                                    учеников продолжают обучение со мной
+                                                </div>
+                                            </li>
+                                            <li class="teacher-benefit">
+                                                <div class="teacher-benefit__number">
+                                                    <span>9,5</span>
+                                                </div>
+                                                <div class="teacher-benefit__descr">
+                                                    средний возраст учеников
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="programs-section">
+            <div class="container">
+                <div class="programs">
+                    <h2 class="section-title">Программы обучения</h2>
+                    <ul class="programs-list">
+                        <li class="programs-item">
+                            <div class="programs-item__wrapper">
+                                <h3 class="programs-item__title">Cube 1</h3>
+                                <p class="programs-item__text">
+                                    Английский для дошкольников (5–6 лет)
+                                </p>
+                                <img src="icons/main-page/programs-cube-1.svg" alt="" class="programs-item__img">
+                                <ul class="programs-points">
+                                    <li class="programs-point">
+                                        Занятия проходят в игровой форме.
+                                    </li>
+                                    <li class="programs-point">
+                                        Ребята естественным образом изучают лексику, грамматику, 
+                                        учат буквы и звуки, тренируют правильное произношение.
+                                    </li>
+                                    <li class="programs-point">
+                                        Дети на занятиях поют, танцуют, рисуют.
+                                    </li>
+                                    <li class="programs-point">
+                                        Занятия проходят быстро и динамично, ребята не замечают, 
+                                        как осваивают английский язык!
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="./programs-page.html" class="primary-btn">Подробнее</a>
+                        </li>
+                        <li class="programs-item">
+                            <div class="programs-item__wrapper">
+                                <h3 class="programs-item__title">Cube 2</h3>
+                                <p class="programs-item__text">
+                                    Английский для школьников (1–2 класс)
+                                </p>
+                                <img src="icons/main-page/programs-cube-2.svg" alt="" class="programs-item__img">
+                                <ul class="programs-points">
+                                    <li class="programs-point">
+                                        Занятия проходят в игровой форме.
+                                    </li>
+                                    <li class="programs-point">
+                                        Ребята естественным образом изучают лексику, грамматику, 
+                                        учат буквы и звуки, тренируют правильное произношение.
+                                    </li>
+                                    <li class="programs-point">
+                                        Занятия проходят быстро и динамично, ребята не замечают, 
+                                        как осваивают английский язык!
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="./programs-page.html" class="primary-btn">Подробнее</a>
+                        </li>
+                        <li class="programs-item">
+                            <div class="programs-item__wrapper">
+                                <h3 class="programs-item__title">Cube 3</h3>
+                                <p class="programs-item__text">
+                                    Английский для школьников (3 класс)
+                                </p>
+                                <img src="icons/main-page/programs-cube-3.svg" alt="" class="programs-item__img">
+                                <ul class="programs-points">
+                                    <li class="programs-point">
+                                        Эффективные занятия по нашей методике помогают ребятам полюбить 
+                                        английский язык, поверить в себя и собственные силы.
+                                    </li>
+                                    <li class="programs-point">
+                                        На занятиях ребята изучают лексику, грамматику, читают, тренируют правильное 
+                                        произношение, учатся воспринимать английскую речь на слух.
+                                    </li>
+                                    <li class="programs-point">
+                                        Занятия проводятся по коммуникативной методике.
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="./programs-page.html" class="primary-btn">Подробнее</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="methodics-section">
+            <div class="container">
+                <div class="methodics">
+                    <h2 class="section-title">Методика преподавания</h2>
+                    <ul class="methodics-list">
+                        <li class="methodics-item">
+                            <img src="img/main-page/methods-1.jpg" alt="" class="methodics-item__img">
+                            <p class="methodics-item__desc">
+                                Карточки для изучения английского языка
+                            </p>
+                        </li>
+                        <li class="methodics-item">
+                            <img src="img/main-page/methods-2.jpg" alt="" class="methodics-item__img">
+                            <p class="methodics-item__desc">
+                                Почувствуй, потрогай и запомни!
+                            </p>
+                        </li>
+                        <li class="methodics-item">
+                            <img src="img/main-page/methods-3.jpg" alt="" class="methodics-item__img">
+                            <p class="methodics-item__desc">
+                                Учимся читать на английском быстро и весело!
+                            </p>
+                        </li>
+                        <li class="methodics-item">
+                            <img src="img/main-page/methods-4.jpg" alt="" class="methodics-item__img">
+                            <p class="methodics-item__desc">
+                                Весёлая грамматика!
+                            </p>
+                        </li>
+                    </ul>
+                    <a href="./methodics-page.html" class="primary-btn">Подробнее</a>
+                </div>
+            </div>
+        </section>
+        <section id="gallery-section">
+            <div class="container">
+                <div class="gallery">
+                    <h2 class="section-title">Галерея</h2>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-top">
+                                    <img src="img/main-page/gallery-1.jpg" alt="" class="gallery-img">
+                                    <img src="img/main-page/gallery-2.jpg" alt="" class="gallery-img">
+                                </div>
+                                <div class="slide-bottom">
+                                    <img src="img/main-page/gallery-3.jpg" alt="" class="gallery-img">
+                                    <img src="img/main-page/gallery-4.jpg" alt="" class="gallery-img">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reviews-section">
+            <div class="container">
+                <div class="reviews">
+                    <h2 class="section-title">Отзывы</h2>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews-slide">
+                                    <div class="review">
+                                        <div class="review-author">
+                                            <img src="icons/main-page/reviewer-1.svg" alt="" class="review-author__avatar">
+                                            <div class="review-author__info">
+                                                <div class="review-author__name">Ярошевич Марина</div>
+                                                <div class="review-author__child">Сын Ярошевич Арсений (9 лет)</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                        </div>
+                                        <p class="review-text">
+                                            «Посещаем студию English cube c большим удовольствием. 
+                                            Нравится как проходит процесс обучения, дети на уроках 
+                                            много играют, но самое главное во время игры — запоминают 
+                                            новые слова. Годовая оценка в школе — 9! Ребёнок с 
+                                            удовольствием ходит на занятия и самостоятельно справляется
+                                            с домашними заданиями в школе».
+                                        </p>
+                                    </div>
+                                    <div class="review">
+                                        <div class="review-author">
+                                            <img src="icons/main-page/reviewer-1.svg" alt="" class="review-author__avatar">
+                                            <div class="review-author__info">
+                                                <div class="review-author__name">Казакевич Марина</div>
+                                                <div class="review-author__child">Сын Казакевич Владислав (8 лет)</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                        </div>
+                                        <p class="review-text">
+                                            «Занимаемся английским языком в студии English Cube! 
+                                            У преподавателя Маргариты очень интересный и творческий 
+                                            подход к обучению! Ребёнок всегда с радостью бежит на занятия!».
+                                        </p>
+                                    </div>
+                                    <div class="review">
+                                        <div class="review-author">
+                                            <img src="icons/main-page/reviewer-1.svg" alt="" class="review-author__avatar">
+                                            <div class="review-author__info">
+                                                <div class="review-author__name">Василевская Ирина</div>
+                                                <div class="review-author__child">Дочь Василевская Милана (7 лет)</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                            <span class="material-symbols-rounded">
+                                                star
+                                            </span>
+                                        </div>
+                                        <p class="review-text">
+                                            «Лучшая студия английского языка в Минске! 
+                                            Профессиональные педагоги, игровая методика, 
+                                            подарки детям за хорошую учёбу! А главное — 
+                                            виден результат, ребёнок читает, знает много слов, 
+                                            строит простые предложения и всегда бежит на занятия».
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./reviews-page.html" class="primary-btn">Оставить отзыв</a>
+                </div>
+            </div>
+        </section>
+        <section id="faq-section">
+            <div class="container">
+                <div class="faq">
+                    <h2 class="section-title">FAQ</h2>
+                    <ul class="faq-list">
+                        <li class="faq-item">
+                            <div class="faq-item__question">
+                                <span>Задают ли домашние задания?</span>
+                            </div>
+                            <div class="faq-item_answer">
+                                Да, обязательно. Домашние задания помогают детям закрепить пройденный на уроке материал.
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <div class="faq-item__question">
+                                <span>Достаточно ли заниматься один раз в неделю?</span>
+                            </div>
+                            <div class="faq-item_answer">
+                                Да, обязательно. Домашние задания помогают детям закрепить пройденный на уроке материал.
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <div class="faq-item__question">
+                                <span>Какие учебники используются при обучении?</span>
+                            </div>
+                            <div class="faq-item_answer">
+                                Да, обязательно. Домашние задания помогают детям закрепить пройденный на уроке материал.
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <div class="faq-item__question">
+                                <span>Нужно ли покупать учебные пособия?</span>
+                            </div>
+                            <div class="faq-item_answer">
+                                Да, обязательно. Домашние задания помогают детям закрепить пройденный на уроке материал.
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <div class="faq-item__question">
+                                <span>Что делать если ребёнок пропустил занятие?</span>
+                            </div>
+                            <div class="faq-item_answer">
+                                Да, обязательно. Домашние задания помогают детям закрепить пройденный на уроке материал.
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <div class="faq-item__question">
+                                <span>На сколько расчитан курс обучения?</span>
+                            </div>
+                            <div class="faq-item_answer">
+                                Да, обязательно. Домашние задания помогают детям закрепить пройденный на уроке материал.
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <div class="faq-item__question">
+                                <span>Выдаются ли дипломы в конце учебного года?</span>
+                            </div>
+                            <div class="faq-item_answer">
+                                Да, обязательно. Домашние задания помогают детям закрепить пройденный на уроке материал.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="connection-section">
+            <div class="parallax-wrapper" data-speed="0.35">
+                <div class="parallax-image" data-speed="0.35"></div>
+            </div>
+            <div class="container">
+                <form action="#" class="connection-form">
+                    <h2 class="section-title">Связь с нами!</h2>
+                    <p class="connection-invite">
+                        Запишитесь на обучение прямо сейчас!
+                    </p>
+                    <ul class="connection-socials">
+                        <li class="connection-socials__item">
+                            <img src="icons/main-page/green-phone.svg" alt="" class="connection-socials__img">
+                            <a href="tel:+375255002464" class="connection-socials__content">
+                                +375 (25) - 500 -24 - 64
+                            </a>
+                        </li>
+                        <li class="connection-socials__item">
+                            <img src="icons/main-page/green-mail.svg" alt="" class="connection-socials__img">
+                            <a href="mailto:minsk.english.cube@gmail.com" class="connection-socials__content">
+                                minsk.english.cube@gmail.com
+                            </a>
+                        </li>
+                        <li class="connection-socials__item">
+                            <img src="icons/main-page/green-inst.svg" alt="" class="connection-socials__img">
+                            <a href="#" class="connection-socials__content">
+                                @minsk_english_cube
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="form-body">
+                        <div class="form-body__wrapper">
+                            <div class="form-body__left">
+                                <div class="programs-select">
+                                    <label class="programs-label">Программа</label>
+                                    <div class="__select" data-state="">
+                                        <div class="__select__title" data-default="Option 0">Cube 1</div>
+                                        <div class="__select__content">
+                                          <input id="select-program-2" class="__select__input" type="radio" name="select-program" />
+                                          <label for="select-program-2" class="__select__label">Cube 1</label>
+                                          <input id="select-program-3" class="__select__input" type="radio" name="select-program" />
+                                          <label for="select-program-3" class="__select__label">Cube 2</label>
+                                          <input id="select-program-4" class="__select__input" type="radio" name="select-program" />
+                                          <label for="select-program-4" class="__select__label">Cube 3</label>
+                                          <input id="select-program-5" class="__select__input" type="radio" name="select-program" />
+                                          <label for="select-program-5" class="__select__label">Cube 4</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="study-select">
+                                    <label class="study-label">Форма обучения</label>
+                                    <div class="__select" data-state="">
+                                        <div class="__select__title" data-default="Option 0">Занятия в группе до 6 человек</div>
+                                        <div class="__select__content">
+                                          <input id="select-study-1" class="__select__input" type="radio" name="select-study" checked />
+                                          <label for="select-study-1" class="__select__label">Занятия в группе до 6 человек</label>
+                                          <input id="select-study-2" class="__select__input" type="radio" name="select-study" />
+                                          <label for="select-study-2" class="__select__label">Занятия в мини — группе (3–4 человека)</label>
+                                          <input id="select-study-3" class="__select__input" type="radio" name="select-study" disabled />
+                                          <label for="select-study-3" class="__select__label">Парные занятия</label>
+                                          <input id="select-study-4" class="__select__input" type="radio" name="select-study" />
+                                          <label for="select-study-4" class="__select__label">Индивидуальные занятия</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-block">
+                                    <label>ФИО слушателя*</label>
+                                    <input type="text" placeholder="Введите имя">
+                                </div>
+                            </div>
+                            <div class="form-body__right">
+                                <div class="input-block">
+                                    <label>ФИО слушателя*</label>
+                                    <input type="text" placeholder="Введите имя">
+                                </div>
+                                <div class="input-block">
+                                    <label>Телефон*</label>
+                                    <input type="text" placeholder="Введите телефон">
+                                </div>
+                                <div class="input-block">
+                                    <label>Email*</label>
+                                    <input type="email" placeholder="Введите email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-block">
+                            <label>Ваше сообщение</label>
+                            <textarea name="message" placeholder="Введите сообщение"></textarea>
+                        </div>
+                        <div class="form-agreement">
+                            Заполняя форму, вы даёте согласие на обработку персональных данных
+                        </div>
+                        <div class="form-submit">
+                            <button class="primary-btn">
+                                Отправить заявку
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="contacts-section">
+            <div class="container">
+                <div class="contacts">
+                    <h2 class="section-title">Контакты</h2>
+                    <div class="contacts-wrapper">
+                        <div class="contacts-wrapper__left">
+                            <div class="contacts-item">
+                                <h4 class="contacts-title phone-title">Телефон</h4>
+                                <div class="contacts-item__content">
+                                    <a href="tel:+375255002464" class="number">
+                                        +375 (25) - 500 -24 - 64
+                                    </a>
+                                    <a href="tg://resolve?domain=agvento-test" class="contacts-social telegram-link"></a>
+                                    <a href="viber://chat?number=%2B375255002464" class="contacts-social viber-link"></a>
+                                    <a href="https://wa.me/375255002464" class="contacts-social whatsapp-link"></a>
+                                </div>
+                            </div>
+                            <div class="contacts-item">
+                                <h4 class="contacts-title mail-title">Электронная почта</h4>
+                                <div class="contacts-item__content">
+                                    <a href="mailto:minsk.english.cube@gmail.com" class="email">
+                                        minsk.english.cube@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contacts-item">
+                                <h4 class="contacts-title address-title">Адрес</h4>
+                                <div class="contacts-item__content">
+                                    <address class="address">
+                                        г. Минск, ул. Чехова 3, пом. 3Н
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="contacts-time">
+                                <h4 class="contacts-title time-title">Время работы</h4>
+                                <div class="contacts-time__content">
+                                    <div>пн-сб — 9.00–20.00</div>
+                                    <div>вск — выходной</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts-wrapper__right">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A338c3dd0c362ffa4bf65cd58e672caab4d3367a8f557260ed3e5421142decd66&amp;source=constructor" width="670" height="502" frameborder="0"></iframe>
+                            <div class="company">
+                                <p class="company-name">Студия английского языка для детей English Cube</p>
+                                <p class="company-descr">
+                                    Частное унитарное предприятие «Инглиш кьюб», УНП 193695911, 
+                                    юридический адрес: г. Минск, ул. Чехова 3, пом. 3Н
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer--desktop">
+            <div class="footer-top">
+                <nav class="footer-nav">
+                    <img src="icons/main-page/english-cube-logo.svg" alt="" class="footer-logo">
+                    <div class="footer-nav__list">
+                        <div class="footer-nav__block">
+                            <a href="#" class="footer-nav__item">О нас</a>
+                            <a href="#" class="footer-nav__item">Галерея</a>
+                            
+                        </div>
+                        <div class="footer-nav__block">
+                            <a href="#" class="footer-nav__item">Программы</a>
+                            <a href="#" class="footer-nav__item">Методика</a>
+                        </div>
+                        <div class="footer-nav__block">
+                            
+                            <a href="#" class="footer-nav__item">Преподаватели</a>
+                            <a href="#" class="footer-nav__item">Вопросы и ответы</a>
+                        </div>
+                    </div>
+                    <div class="footer-nav__contacts">
+                        <div class="phones">
+                            <a href="tel:+375255002464" class="number">
+                                +375 (25) - 500 -24 - 64
+                            </a>
+                            <a href="tg://resolve?domain=agvento-test" class="contacts-social telegram-link"></a>
+                            <a href="viber://chat?number=%2B375255002464" class="contacts-social viber-link"></a>
+                            <a href="https://wa.me/375255002464" class="contacts-social whatsapp-link"></a>
+                        </div>
+                        <a href="mailto:minsk.english.cube@gmail.com" class="">
+                            minsk.english.cube@gmail.com
+                        </a>
+                    </div>
+                    <a href="#" class="primary-btn">Заказать звонок</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom__info">
+                        <span class="footer-bottom__text">© 2023 English Cube</span>
+                        <span class="footer-bottom__by">Сайт разработан Втоп3</span>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </footer>
+    <footer class="footer--mobile">
+        <div class="footer-wrapper">
+            <div class="footer-top">
+                <img src="icons/main-page/english-cube-logo.svg" alt="" class="footer-logo">
+                <div class="footer-nav__contacts">
+                    <div class="phones">
+                        <a href="tel:+375255002464" class="number">
+                            +375 (25) - 500 -24 - 64
+                        </a>
+                        <a href="tg://resolve?domain=agvento-test" class="contacts-social telegram-link"></a>
+                        <a href="viber://chat?number=%2B375255002464" class="contacts-social viber-link"></a>
+                        <a href="https://wa.me/375255002464" class="contacts-social whatsapp-link"></a>
+                    </div>
+                    <a href="mailto:minsk.english.cube@gmail.com" class="">
+                        minsk.english.cube@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom__list">
+                    <div class="footer-bottom__block">
+                        <a href="#" class="footer-nav__item">О нас</a>
+                        <a href="#" class="footer-nav__item">Галерея</a>
+                        
+                    </div>
+                    <div class="footer-bottom__block">
+                        <a href="#" class="footer-nav__item">Программы</a>
+                        <a href="#" class="footer-nav__item">Методика</a>
+                    </div>
+                    <div class="footer-bottom__block">
+                        <a href="#" class="footer-nav__item">Преподаватели</a>
+                        <a href="#" class="footer-nav__item">Вопросы и ответы</a>
+                    </div>
+                </div>
+                <button class="primary-btn">Заказать звонок</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom__info">
+                <span class="footer-bottom__text">© 2023 English Cube</span>
+                <span class="footer-bottom__by">Сайт разработан Втоп3</span>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/select.js"></script>
+    <script src="scripts/accordion.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

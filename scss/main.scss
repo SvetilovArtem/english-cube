@@ -1,0 +1,42 @@
+@import './base/vars';
+@import './base/reset';
+@import './base/base';
+
+// MIXINS
+@import './mixins/mixins';
+
+// MAIN PAGE
+
+@import './blocks/header';
+
+@import './blocks/about';
+
+@import './blocks/teachers';
+
+@import './blocks/programs';
+
+@import './blocks/methodics';
+
+@import './blocks/gallery';
+
+@import './blocks/reviews';
+
+@import './blocks/faq';
+
+@import './blocks/connection';
+
+@import './blocks/contacts';
+
+@import './blocks/footer';
+
+// METHODICS-PAGE
+@import './blocks/methodics-page/methodics';
+
+// REVIEWS-PAGE
+@import './blocks/reviews-page/reviews';
+
+// PROGRAMS-PAGE
+@import './blocks/programs-page/programs';
+
+// ERROR-PAGE
+@import './blocks/error-page/404';

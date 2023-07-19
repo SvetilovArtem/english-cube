@@ -1,0 +1,147 @@
+#programs-section {
+    padding: 100px 0;
+    @media (max-width: 1250px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767px) {
+        padding: 30px 0 20px 0;
+    }
+    .programs {
+        .section-title {
+            margin-bottom: 50px;
+            @media (max-width: 1250px) {
+                margin-bottom: 20px;
+            }
+        }
+        .programs-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                gap: 12px;
+
+            }
+            .programs-item {
+                min-height: 644px;
+                padding: 30px 19px 30px 34px;
+                border-radius: 10px;
+                border: 3px solid #D6FFDC;
+                background: #E8FCEB;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                @media (max-width: 1250px) {
+                    min-height: 396px;
+                    padding: 19px 14px 19px 19px;
+                }
+                @media (max-width: 767px) {
+                    min-height: 554px;
+                    padding: 19px 9px 18px 9px;
+                }
+                .primary-btn {
+                    width: 129px;
+                    text-align: center;
+                    @media (max-width: 1250px) {
+                        padding: 8px 12px;
+                        font-size: 10px;
+                        max-width: 84px;
+                    }
+                    @media (max-width: 767px) {
+                        padding: 14px 16px;
+                        font-size: 16px;
+                        max-width: 129px;
+                    }
+                }
+                .programs-item__wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .programs-item__title {
+                        font-size: 36px;
+                        margin-bottom: 11px; 
+                        line-height: 1;
+                        @media (max-width: 1250px) {
+                            font-size: 22px;
+                            margin-bottom: 7px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 36px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .programs-item__text {
+                        font-weight: 500;
+                        // line-height: 41px;
+                        margin-bottom: 10px;
+                        max-width: 271px;
+                        text-align: center;
+                        @media (max-width: 1250px) {
+                            margin-bottom: 6px;
+                            max-width: 160px;
+                            font-size: 10px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 16px;
+                            max-width: 263px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .programs-item__img {
+                        width: 53px;
+                        height: 108px;
+                        margin-bottom: 5px;
+                        @media (max-width: 1250px) {
+                            width: 36px;
+                            height: 67px;
+                            margin-bottom: 9px;
+                        }
+                        @media (max-width: 767px) {
+                            width: 69px;
+                            height: 105px;
+                            margin-bottom: 11px;
+                        }
+                    }
+                    .programs-points {
+                        line-height: 1;
+                        list-style: circle;
+
+                        .programs-point {
+                            padding-left: 12px;
+                            position: relative;
+                            &::before {
+                                content: '';
+                                border-radius: 50%;
+                                background-color: $dark;
+                                width: 3px;
+                                height: 3px;
+                                position: absolute;
+                                left: -12px;
+                                top: 5px;
+                                @media (max-width: 767px) {
+                                    left: -3px;
+                                }
+                            }
+                            &:not(:last-child) {
+                                margin-bottom: 10px;
+                            }
+                            @media (max-width: 1250px) {
+                                font-size: 10px;
+                            }
+                            @media (max-width: 767px) {
+                                font-size: 14px;
+                            }
+                        }
+                        @media (max-width: 1250px) {
+                            margin-bottom: 23px;
+                        }
+                        @media (max-width: 767px) {
+                            margin-bottom: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

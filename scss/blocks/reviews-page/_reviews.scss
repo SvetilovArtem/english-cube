@@ -1,0 +1,323 @@
+.reviews-page {
+    background: url(../img/main-page/checkered-sheet.jpg) repeat;
+    .section-title {
+        margin-bottom: 50px;
+        @media (max-width: 1250px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 650px) {
+            margin-bottom: 10px;
+        }
+    }
+    .primary-btn--review {
+        margin-bottom: 50px;
+        display: inline-block;
+        @media (max-width: 1250px) {
+            margin-bottom: 33px;
+        }
+        @media (max-width: 650px) {
+            margin-bottom: 20px;
+        }
+    }
+    #reviews-header {
+        padding: 40px 0 50px 0;
+        @include header;
+    }
+    .reviews-section {
+        padding: 50px 0 100px 0;
+        @media (max-width: 1250px) {
+            padding: 40px 0;
+        }
+        @media (max-width: 650px) {
+            padding: 20px 0;
+        }
+        .reviews-list {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @media (max-width: 1250px) {
+                gap: 20px;
+            }
+            .review-item {
+                border-radius: 8px;
+                border: 2px solid #D6F0FF;
+                background: #ECF8FF;
+                padding: 30px 36px 30px 30px;
+                @media (max-width: 1250px) {
+                    padding: 20px 23px 20px 17px;
+                }
+                @media (max-width: 767px) {
+                    padding: 16px 16px 17px 17px;
+                }
+                .author {
+                    display: flex;
+                    // align-items: center;
+                    .avatar {
+                        width: 65px;
+                        height: 65px;
+                        margin-right: 22px;
+                        @media (max-width: 1250px) {
+                            margin-right: 13px;
+                        }
+                    }
+                    .info {
+                        max-width: 117px;
+                        padding-top: 10px;
+                        .name {
+                            font-weight: 500;
+                            font-size: 20px;
+                            margin-bottom: 8px;
+                            line-height: 24px;
+                            @media (max-width: 1250px) {
+                                font-size: 10px;
+                                line-height: 12px;
+                            }
+                        }
+                        .child {
+                            font-size: 14px;
+                            line-height: 17px;
+                            @media (max-width: 1250px) {
+                                font-size: 8px;
+                                line-height: 12px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    font-size: 16px;
+                    line-height: 19px;
+                    width: 734px;
+                    padding-top: 10px;
+                    @media (max-width: 1250px) {
+                        font-size: 10px;
+                        line-height: 12px;
+                        width: 466px;
+                    }
+                    @media (max-width: 767px) {
+                        width: 100%;   
+                    }
+                }
+                .review-content {
+                    display: flex;
+                    // align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 49px;
+                    @media (max-width: 767px) {
+                        flex-direction: column;
+
+                    }
+                    .text {
+                        @media (max-width: 767px) {
+                            display: flex;
+                            flex-direction: column-reverse;
+                            
+                        }
+                        .reviewer-text__par {
+                            margin-bottom: 7px;
+                        }
+                        .reviewer-rating {
+                            font-size: 15px;
+                            line-height: 1;
+                            color: $orange;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .review-answer {
+                    display: flex;
+                    // align-items: center;
+                    justify-content: space-between;
+                    @media (max-width: 767px) {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            @media (max-width: 767px) {
+                gap: 8px; 
+            }
+            .pagination-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 48px;
+                border-radius: 50px;
+                background: #FFF;
+                box-shadow: 0px 4px 15px 0px rgba(0, 104, 55, 0.40);
+                cursor: pointer;
+                @media (max-width: 767px) {
+                    display: none; 
+                }
+            }
+            .pagination-btn:first-child, 
+            .pagination-btn:last-child, 
+            .pagination-btn:nth-child(2), 
+            .pagination-btn:nth-last-child(-n+2), 
+            .pagination-btn:nth-child(5) {
+                display: flex;
+            }
+        }
+    }
+    .add-review {
+        .add-form {
+            padding: 50px;
+            border-radius: 10px;
+            border: 3px solid #D6FFDC;
+            background: #E8FCEB;
+            margin-bottom: 100px;
+            @media (max-width: 1250px) {
+                padding: 20px 40px;
+                margin-bottom: 40px;
+            }
+            @media (max-width: 767px) {
+                padding: 20px 4px;  
+            }
+            .section-title {
+                margin-bottom: 36px;
+                @media (max-width: 1250px) {
+                    margin-bottom: 12px;
+                }
+                @media (max-width: 767px) {
+                    margin-bottom: 12px;   
+                }
+            }
+            .form-text {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 43px;
+                @media (max-width: 1250px) {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 12px;   
+                    line-height: 14px;
+                    margin-bottom: 14px;
+                }
+            }
+            .form-fields {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 100px;
+                @media (max-width: 1250px) {
+                    gap: 15px;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+                @media (max-width: 767px) {
+                    flex-direction: column;  
+                    gap: 8px;
+                    width: 100%;
+                }
+                .form-inputs {
+                    width: 100%;
+
+                }
+                .input-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    @media (max-width: 767px) {
+                        width: 100%;  
+                    }
+                    label {
+                        display: block;
+                        text-align: left;
+                        width: 100%;
+                        @media (max-width: 1250px) {
+                            margin-bottom: 5px;
+                        }
+                    }
+                    input, textarea {
+                        border-radius: 8px;
+                        border: 1px solid $light-green;
+                        width: 100%;
+                    }
+                    input {
+                        padding: 11px 20px;
+                        height: 38px;
+                        width: 370px;
+                        @media (max-width: 1250px) {
+                            width: 334px;
+                        }
+                        @media (max-width: 767px) {
+                            width: 100%;  
+                        }
+                    }
+                    textarea {
+                        padding: 13px 12px 16px 14px;
+                        min-height: 110px;
+                        width: 599px;
+                        @media (max-width: 1250px) {
+                            width: 334px;
+                        }
+                        @media (max-width: 767px) {
+                            width: 100%; 
+                            min-height: 128px; 
+                        }
+                    }
+                }
+            }
+            .form-bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 100px;
+                @media (max-width: 1250px) {
+                    gap: 15px;
+                }
+                @media (max-width: 767px) {
+                    flex-direction: column;  
+                }
+                .raiting-block {
+                    width: 370px;
+                    cursor: pointer;
+                    .reviewer-rating {
+                        span {
+                            color: $orange;
+                        }
+                    }
+                    @media (max-width: 1250px) {
+                        width: 334px;
+                    }
+                    @media (max-width: 767px) {
+                        width: 100%;  
+                    }
+                }
+                .button-wrapper {
+                    width: 599px;
+                    @media (max-width: 1250px) {
+                        width: 334px;
+                    }
+                    @media (max-width: 767px) {
+                        width: 100%;  
+                    }
+                    .primary-btn {
+                        width: 204px;
+                        @media (max-width: 1250px) {
+                            width: 175px;
+                        }
+                        @media (max-width: 767px) {
+                            padding: 8px 12px;
+                            font-size: 14px;
+                            line-height: 17px; 
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

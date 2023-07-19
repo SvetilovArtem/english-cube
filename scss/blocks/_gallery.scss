@@ -1,0 +1,72 @@
+#gallery-section {
+    padding: 100px 0 103px 0;
+    background: url(../img/main-page/gallery-bg.jpg) 50%/cover no-repeat;
+    @media (max-width: 1250px) {
+        padding: 40px 0 100px 0;
+    }
+    @media (max-width: 767px) {
+        padding: 20px 0 80px 0;
+    }
+    .gallery {
+        .section-title {
+            margin-bottom: 50px;
+            @media (max-width: 1250px) {
+                margin-bottom: 20px;
+            }
+        }
+        .swiper {
+            .swiper-wrapper {
+
+                .swiper-slide {
+                    
+                    .slide-top, .slide-bottom {
+                        display: flex;
+                        gap: 30px;
+                        @media (max-width: 650px) {
+                            flex-direction: column;
+                            gap: 12px;
+                        }
+                    }
+                    .slide-bottom {
+                        @media (max-width: 1250px) {
+                            .gallery-img:nth-child(1) {
+                                max-width: 423px;
+                            }
+                            .gallery-img:nth-child(2) {
+                                max-width: 294px;
+                            }
+                        }
+                        @media (max-width: 650px) {
+                            .gallery-img:nth-child(1) {
+                                max-width: 100%;
+                            }
+                            .gallery-img:nth-child(2) {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                    .slide-top {
+                        margin-bottom: 30px;
+                        @media (max-width: 1250px) {
+                            .gallery-img:nth-child(1) {
+                                max-width: 294px;
+                            }
+                            .gallery-img:nth-child(2) {
+                                max-width: 423px;
+                            }
+                        }
+                        @media (max-width: 650px) {
+                            margin-bottom: 12px;
+                            .gallery-img:nth-child(1) {
+                                max-width: 100%;
+                            }
+                            .gallery-img:nth-child(2) {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

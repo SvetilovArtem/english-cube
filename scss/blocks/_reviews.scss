@@ -1,0 +1,120 @@
+#reviews-section {
+    padding: 100px 0;
+    background: url(../img/main-page/checkered-sheet.jpg) 50%/cover no-repeat;
+    @media (max-width: 1250px) {
+        padding: 40px 0 35px 0;
+    }
+    @media (max-width: 767px) {
+        padding: 35px 0 20px 0;
+    }
+    .reviews {
+        .section-title {
+            margin-bottom: 53px;
+            @media (max-width: 1250px) {
+                margin-bottom: 20px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 12px;
+            }
+        }
+        .reviews-slide {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .review {
+                padding: 27px 27px 30px 27px;
+                border-radius: 10px;
+                @media (max-width: 1250px) {
+                    padding: 17px 17px 17px 17px;
+                }
+                @media (max-width: 767px) {
+                    padding: 17px 19px 19px 19px;
+                }
+                .review-author {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 23px;
+                    @media (max-width: 1250px) {
+                        margin-bottom: 14px;
+                    }
+                    .review-author__avatar {
+                        border: 6px solid transparent;
+                        border-radius: 50%;
+                        width: 105px;
+                        height: 105px;
+                        border-image: url(../icons/main-page/avatar-border.png) 6 repeat repeat;
+                        @media (max-width: 1250px) {
+                            width: 65px;
+                            height: 65px;
+                            margin-right: 14px;
+                        }
+                    }
+                    .review-author__info {
+                        .review-author__name {
+                            margin-bottom: 9px;
+                            font-weight: 500;
+                            @media (max-width: 1250px) {
+                                margin-bottom: 6px;
+                                font-size: 10px;
+                                line-height: 11px;
+                            }
+                        }
+                        .review-author__child {
+                            font-size: 14px;
+                            @media (max-width: 1250px) {
+                                font-size: 8px;
+                                line-height: 10px;
+                            }
+                        }
+                    }
+                }
+                .review-rating {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 12px;
+                    @media (max-width: 1250px) {
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        font-size: 24px;
+                        line-height: 1;
+                        color: $orange;
+                        cursor: pointer;
+                        @media (max-width: 1250px) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    border: 3px solid #FFF59F;
+                    background: #FCFDD1;
+                }
+                &:nth-child(2) {
+                    border: 3px solid #D6FFDC;
+                    background: #E8FCEB;
+                }
+                &:nth-child(3) {
+                    border: 3px solid #FFD9D9;
+                    background: #FFECEC;
+                }
+                .review-text {
+                    @media (max-width: 1250px) {
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                }
+            }
+        }
+        .swiper {
+            margin-bottom: 20px;
+            @media (max-width: 1250px) {
+                margin-bottom: 71px;
+            }
+        }
+    }
+}

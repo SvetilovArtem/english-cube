@@ -1,0 +1,226 @@
+#teachers-section {
+    padding: 100px 0 93px 0;
+    background: url(../img/main-page/checkered-sheet.jpg) 50%/cover no-repeat;
+    @media (max-width: 1250px) {
+        padding: 40px 0 100px 0;
+    }
+    @media (max-width: 767px) {
+        padding: 20px 0 81px 0;
+    }
+    .teachers {
+        .section-title {
+            margin-bottom: 21px;
+            @media (max-width: 1250px) {
+                margin-bottom: 0;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 7px;
+            }
+        }
+        .teachers-quote {
+            margin-left: auto;
+            max-width: 303px;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 19px;
+            @media (max-width: 1250px) {
+                font-size: 12px;
+            }
+            @media (max-width: 767px) {
+                font-size: 10px;
+                max-width: 187px;
+            }
+            .quote-text {
+                text-align: right;
+            }
+            .quote-author {
+                font-size: 12px;
+                font-style: normal;
+                margin-top: 4px;
+                text-align: right;
+                @media (max-width: 1250px) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .teachers-list {
+        .swiper {
+            position: relative;
+            .swiper-button-prev, .swiper-button-next {
+                position: absolute;
+            }
+        }
+
+    }
+    .teacher-slide {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 38px;
+        @media (max-width: 1250px) {
+            padding-left: 0;
+        }
+
+        .teacher-info {
+            // margin-right: 98px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .teacher-avatar {
+                position: relative;
+                width: 260px;
+                height: 260px;
+                margin-bottom: 11px;
+                border-radius: 50%;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: url(../icons/main-page/photo-frame.svg) no-repeat;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 15;
+                }
+                @media (max-width: 1250px) {
+                    margin-bottom: 5px;
+                    width: 225px;
+                    height: 225px;
+                }
+            }
+            .teacher-name {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 50px;
+                margin-bottom: 8px;
+                @media (max-width: 1250px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .teacher-text {
+                max-width: 174px;
+                text-align: center;
+                @media (max-width: 1250px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .teacher-about {
+            max-width: 769px;
+            @media (max-width: 1250px) {
+                max-width: 489px;
+            }
+            .teacher-about__title {
+                margin-bottom: 19px;
+                font-size: 24px;
+                line-height: 29px;
+                @media (max-width: 1250px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 15px;
+                }
+            }
+            .teacher-about__text {
+                margin-bottom: 19px;
+                @media (max-width: 1250px) {
+                    margin-bottom: 40px;
+                }
+                .teacher-about__paragraph {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .teacher-benefits {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 29px;
+                .teacher-benefit {
+                    min-height: 136px;
+                    border-radius: 10px;
+                    border: 3px solid #FFC37D;
+                    background: #FDE4C7;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px 10px;
+                    .teacher-benefit__number {
+                        font-size: 13px;
+                        margin-bottom: 11px;
+                        span {
+                            font-weight: 500;
+                            font-size: 36px;
+                        }
+                    }
+                    .teacher-benefit__descr {
+                        text-align: center;
+                        font-size: 13px;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+    .desktop {
+        @media (max-width: 1250px) {
+            display: none;
+        }
+    }
+    .mobile {
+        display: none;
+        .teacher-wrapper {
+            display: flex;
+            column-gap: 32px;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
+        }
+        .teacher-benefits {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 29px;
+            @media (max-width: 767px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .teacher-benefit {
+                min-height: 130px;
+                border-radius: 10px;
+                border: 3px solid #FFC37D;
+                background: #FDE4C7;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 7px;
+                .teacher-benefit__number {
+                    font-size: 13px;
+                    margin-bottom: 11px;
+                    span {
+                        font-weight: 500;
+                        font-size: 36px;
+                    }
+                }
+                .teacher-benefit__descr {
+                    text-align: center;
+                    font-size: 13px;
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 1250px) {
+            display: block;
+        }
+    }
+}

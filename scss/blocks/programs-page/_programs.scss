@@ -1,0 +1,380 @@
+.programs-page {
+    background: url(../img/main-page/checkered-sheet.jpg) repeat;
+    position: relative;
+    overflow: hidden;
+    .section-title {
+        margin-bottom: 50px;
+        @media (max-width: 1250px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 650px) {
+            margin-bottom: 10px;
+        }
+    }
+    .enroll-modal {
+        display: flex;
+        flex-direction: column;
+        padding: 62px 78px 58px 78px;
+        position: absolute;
+        top: 60px;
+        left: calc(50% - 313px);
+        max-width: 626px;
+        height: 704px;
+        z-index: 25;
+        border-radius: 10px;
+        border: 2px solid #D6FFDC;
+        background: #E8FCEB;
+        overflow: hidden;
+        transform: translateY(-300%);
+        transition: transform .5s ease-in-out;
+        @media (max-width: 690px) {
+            top: 60px;
+            left: calc(50% - 150px);
+            width: 300px;
+            padding: 20px 5px;
+        }
+        .enroll-course {
+            margin-bottom: 50px;
+            @media (max-width: 690px) {
+                margin-bottom: 20px;
+            }
+        }
+        .enroll-text {
+            margin-bottom: 19px;
+        }
+        .close-button {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 32px;
+            height: 32px;
+            background: url(../icons/main-page/close-button.svg) 50%/cover no-repeat;
+            cursor: pointer;
+            transition: all .4s ease-in-out;
+            &:hover {
+                transform: rotate(360deg);
+            }
+            @media (max-width: 690px) {
+                top: 10px;
+                right: 10px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .enroll-modal__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            max-width: 306px;
+        }
+        .form-enroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            // padding: 50px 5px 40px 5px;
+            .primary-btn {
+                padding: 14px 16px;
+                width: 128px;
+            }
+            .input-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                width: 470px;
+                @media (max-width: 690px) {
+                    width: 100%;
+                }
+                &:last-child {
+                    margin-bottom: 16px;
+                }
+                label {
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 5px;
+                }
+                input {
+                    border-radius: 8px;
+                    border: 1px solid $light-green;
+                    height: 38px;
+                    width: 100%;
+                    padding: 11px 20px;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+            .enroll-form__agreement {
+                font-size: 12px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .enroll-modal--active {
+        transform: translateY(0);
+    }
+
+
+    #programs-header {
+        padding: 40px 0 50px 0;
+        @include header;
+    }
+    
+    .programs-section {
+        padding: 50px 0 150px 0;
+        @media (max-width: 1250px) {
+            padding: 20px 0 40px 0;
+        }
+        @media (max-width: 650px) {
+            padding: 10px 0 20px 0;
+        }
+        .programs-cards {
+            .programs-card {
+                padding: 30px 35px;
+                width: 100%;
+                border-radius: 10px;
+                border: 3px solid #D6F0FF;
+                background: #ECF8FF;
+                &:not(:last-child) {
+                    margin-bottom: 50px; 
+                    @media (max-width: 1250px) {
+                        margin-bottom: 20px;
+                    } 
+                }
+                @media (max-width: 1250px) {
+                    padding: 20px 36px 40px 36px;
+                }
+                @media (max-width: 650px) {
+                    padding: 19px 12px 13px 12px;
+                }
+                .programs-card__title {
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 44px;
+                    margin-bottom: 17px;
+                    text-align: center;
+                    @media (max-width: 1250px) {
+                        font-size: 22px;
+                        line-height: 27px;
+                        margin-bottom: 12px;
+                    }
+                    @media (max-width: 650px) {
+                        font-size: 24px;
+                        line-height: 29px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .programs-card__text {
+                    font-size: 24px;
+                    line-height: 29px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    @media (max-width: 1250px) {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    @media (max-width: 650px) {
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-bottom: 20px;
+                    }
+                }
+                .programs-descriptions {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    column-gap: 72px;
+                    margin-bottom: 50px;
+                    @media (max-width: 1250px) {
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 45px;
+                    row-gap: 12px;
+                    margin-bottom: 40px;
+                    }
+                    @media (max-width: 650px) {
+                        grid-template-columns: 1fr;
+                        column-gap: 0;
+                        row-gap: 10px;
+                        margin-bottom: 21px;
+                    }
+                    .programs-description {
+                        font-weight: 500;
+                        padding-left: 20px;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            width: 3px;
+                            height: 3px;
+                            content: '';
+                            top: 5px;
+                            left: 0;
+                            background-color: $dark;
+                            border-radius: 50%;
+                        }
+                        &:nth-child(4) {
+                            grid-column: 3/4;
+                            grid-row: 2/3;
+                            height: 60%;
+                            margin-top: -15px;
+                            @media (max-width: 1250px) {
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                margin-top: -10px;
+                            }
+                            @media (max-width: 650px) {
+                                grid-column: 1/2;
+                                grid-row: 4/5;
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+                .programs-forms {
+                    .programs-forms__title {
+                        line-height: 29px;
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                        font-weight: 500;
+                        margin-bottom: 30px;
+                        text-align: center;
+                        @media (max-width: 1250px) {
+                            font-size: 18px;
+                            line-height: 22px;
+                            margin-bottom: 20px;
+                        }
+                        @media (max-width: 650px) {
+                            display: none;
+                        }
+                    }
+                    .programs-forms__list {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        row-gap: 20px;
+                        column-gap: 20px;
+                        margin: 0 auto;
+                        @media (max-width: 1250px) {
+                            grid-template-columns: repeat(2, 1fr);
+                            column-gap: 30px;
+                            max-width: 680px;
+                        }
+                        @media (max-width: 650px) {
+                            grid-template-columns: 1fr;
+                            column-gap: 0;
+                            row-gap: 12px;
+                        }
+                        .programs-forms__item {
+                            padding: 20px 18px 20px 19px;
+                            border-radius: 10px;
+                            border: 3px solid #A7D8F4;
+                            background: #CBE2EF;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            max-width: 260px;
+                            @media (max-width: 1250px) {
+                                padding: 31px 14px 20px 15px;
+                                max-width: 324px;
+                            }
+                            @media (max-width: 650px) {
+                                padding: 14px 19px 12px 19px;
+                                margin: 0 auto;
+                                max-width: 360px;
+                                width: 360px;
+                            }
+                            @media (max-width: 450px) {
+                                max-width: 254px;
+                                width: 100%;
+                            }
+                            .programs-forms__name {
+                                text-align: center;
+                                margin-bottom: 4px;
+                                font-weight: 500;
+                                @media (max-width: 1250px) {
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                    margin-bottom: 21px;
+                                }
+                                @media (max-width: 650px) {
+                                    font-size: 16px;
+                                    line-height: 19px;
+                                    margin-bottom: 8px;
+                                }
+                            }
+                            .programs-forms__bages {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                gap: 10px;
+                                margin-bottom: 20px;
+                                @media (max-width: 1250px) {
+                                    margin-bottom: 10px;
+                                }
+                                @media (max-width: 650px) {
+                                    margin-bottom: 10px;
+                                }
+                                .programs-forms__bage {
+                                    padding: 4px;
+                                    border-radius: 5px;
+                                    border: 1px solid #A7D8F4;
+                                    background: #FFF;
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                    display: flex;
+                                    align-items: center;
+                                    &:first-child {
+                                        padding-left: 18px;
+                                        background-image: url(../icons/programs-page/carbon_time.svg);
+                                        background-size: 12px;
+                                        background-repeat: no-repeat;
+                                        background-position: center left 4px;
+                                    }
+                                }
+                            }
+                            .programs-forms__price {
+                                text-align: center;
+                                margin-bottom: 10px;
+                                @media (max-width: 650px) {
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                    margin-bottom: 7px;
+                                }
+                            }
+                            .programs-forms__total {
+                                text-align: center;
+                                margin-bottom: 18px;
+                                @media (max-width: 1250px) {
+                                    margin-bottom: 13px;
+                                }
+                                @media (max-width: 650px) {
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                    margin-bottom: 17px;
+                                }
+                            }
+                            .blue-btn {
+                                border-radius: 10px;
+                                background: #A7D8F4;
+                                padding: 14px 16px;
+                                transition: all .3s ease-in-out;
+                                &:hover {
+                                    background: #ECF8FF;
+                                }
+                                @media (max-width: 1250px) {
+                                    padding: 8px 12px;
+                                }
+                                @media (max-width: 1250px) {
+                                    padding: 14px 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
