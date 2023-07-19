@@ -58,6 +58,14 @@ const menuHidden = document.querySelector('.menu-hidden')
 const mHeader = document.querySelector('.header-wrapper__mobile')
 const mOrderButton = menuHidden.querySelector('.primary-btn')
 
+const menuHiddenItems = document.querySelectorAll('.menu-hidden__link')
+
+menuHiddenItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menuHidden.classList.toggle('menu-hidden--active')
+    })
+})
+
 burgerBtn.addEventListener('click', () => {
     // mHeader.style.position === 'fixed' ? mHeader.style.position = 'static' : mHeader.style.position = 'fixed'
     menuHidden.classList.toggle('menu-hidden--active')
