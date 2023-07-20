@@ -1,5 +1,9 @@
 #about-section {
     padding: 100px 0 99px 0;
+    background-image: url(../icons/main-page/paper_plane.svg);
+    background-size: 432px 295px;
+    background-position: calc(50% - 650px) 540px;
+    background-repeat: no-repeat;
     @media (max-width: 1250px) {
         padding: 40px 0 74px 0;
     }
@@ -216,7 +220,6 @@
                 }
                 &:nth-child(6) {
                     grid-area: 3 / 4 / 5 / 5;
-
                     border: 3px solid #D6F0FF;
                     background: #ECF8FF;
                     padding: 20px 9px;

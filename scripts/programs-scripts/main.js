@@ -1,6 +1,6 @@
 const orderModal = document.querySelector('.order-modal')
 const submitBtn = orderModal.querySelector('.primary-btn')
-const closeBtn = orderModal.querySelector('.close-button')
+const closeBtns = document.querySelectorAll('.close-button')
 const overlayOrderModal = document.querySelector('.overlay')
 
 const headerNav = document.querySelector('.header-nav')
@@ -22,9 +22,9 @@ enrollSubmitBtn.addEventListener('click', () => {
     thanksModalText.innerHTML = 'Ваша заявка принята!'
 
     setTimeout(() => {
-        overlayOrderModal.classList.toggle('overlay--active')
-        thanksModal.classList.toggle('thanks-modal--active')
-    }, 3500)
+        overlayOrderModal.classList.remove('overlay--active')
+        thanksModal.classList.remove('thanks-modal--active')
+    }, 6000)
 })
 cubes.forEach((cube, index) => {
     const enrollButtons = cube.querySelectorAll('.blue-btn')
@@ -52,11 +52,12 @@ cubes.forEach((cube, index) => {
     })
 })
 
-
-
-closeBtn.addEventListener('click', () => {
-    orderModal.classList.remove('order-modal--active')
-    overlayOrderModal.classList.remove('overlay--active')
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        orderModal.classList.remove('order-modal--active')
+        overlayOrderModal.classList.remove('overlay--active')
+        thanksModal.classList.remove('thanks-modal--active')
+    })
 })
 
 orderButton.addEventListener('click', () => {
@@ -70,9 +71,9 @@ submitBtn.addEventListener('click', () => {
     thanksModalText.innerHTML = 'Ваша заявка принята!'
 
     setTimeout(() => {
-        overlayOrderModal.classList.toggle('overlay--active')
-        thanksModal.classList.toggle('thanks-modal--active')
-    }, 3500)
+        overlayOrderModal.classList.remove('overlay--active')
+        thanksModal.classList.remove('thanks-modal--active')
+    }, 6000)
     
 
 })

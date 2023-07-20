@@ -44,6 +44,18 @@
                 border: 2px solid #D6F0FF;
                 background: #ECF8FF;
                 padding: 30px 36px 30px 30px;
+                &:nth-child(1) {
+                    border: 3px solid #FFF59F;
+                    background: #FCFDD1;
+                }
+                &:nth-child(2) {
+                    border: 3px solid #D6FFDC;
+                    background: #E8FCEB;
+                }
+                &:nth-child(3) {
+                    border: 3px solid #FFD9D9;
+                    background: #FFECEC;
+                }
                 @media (max-width: 1250px) {
                     padding: 20px 23px 20px 17px;
                 }
@@ -281,13 +293,17 @@
                 @media (max-width: 767px) {
                     flex-direction: column;  
                 }
+
                 .raiting-block {
                     width: 370px;
                     cursor: pointer;
                     .reviewer-rating {
-                        span {
-                            color: $orange;
-                        }
+                        // label {
+                        //     color: $orange;
+                        // }
+                        display: flex;
+                        justify-content: start;
+                        flex-direction: row-reverse;
                     }
                     @media (max-width: 1250px) {
                         width: 334px;
@@ -296,6 +312,44 @@
                         width: 100%;  
                     }
                 }
+                .reviewer-rating:not(:checked) > input {
+                    display: none;
+                }
+                .reviewer-rating:not(:checked) > label {
+                    float: right;
+                    width: 42px;
+                    padding: 0;
+                    cursor: pointer;
+                    font-size: 32px;
+                    line-height: 32px;
+                    color: lightgrey;
+                    text-shadow: 1px 1px #bbb;
+                }
+                .reviewer-rating:not(:checked) > label:before {
+                    content: '★';
+                }
+                .reviewer-rating > input:checked ~ label {
+                    color: $orange;
+                    text-shadow: 1px 1px #c60;
+                }
+                .reviewer-rating:not(:checked) > label:hover,
+                .reviewer-rating:not(:checked) > label:hover ~ label {
+                    color: $orange;
+                }
+                .reviewer-rating > input:checked + label:hover,
+                .reviewer-rating > input:checked + label:hover ~ label,
+                .reviewer-rating > input:checked ~ label:hover,
+                .reviewer-rating > input:checked ~ label:hover ~ label,
+                .reviewer-rating > label:hover ~ input:checked ~ label {
+                    color: $orange;
+                    text-shadow: 1px 1px goldenrod;
+                }
+                .reviewer-rating > label:active {
+                    position: relative;
+                }
+               
+
+
                 .button-wrapper {
                     width: 599px;
                     @media (max-width: 1250px) {

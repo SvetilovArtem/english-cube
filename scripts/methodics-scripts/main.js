@@ -1,6 +1,6 @@
 const orderModal = document.querySelector('.order-modal')
 const submitBtn = orderModal.querySelector('.primary-btn')
-const closeBtn = orderModal.querySelector('.close-button')
+const closeBtns = document.querySelectorAll('.close-button')
 const overlayOrderModal = document.querySelector('.overlay')
 
 const headerNav = document.querySelector('.header-nav')
@@ -17,9 +17,12 @@ const mFooterOrderButton = mFooter.querySelector('.primary-btn')
 
 console.log(footer, mFooterOrderButton)
 
-closeBtn.addEventListener('click', () => {
-    orderModal.classList.toggle('order-modal--active')
-    overlayOrderModal.classList.toggle('overlay--active')
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        orderModal.classList.remove('order-modal--active')
+        overlayOrderModal.classList.remove('overlay--active')
+        thanksModal.classList.remove('thanks-modal--active')
+    })
 })
 
 orderButton.addEventListener('click', () => {
@@ -33,9 +36,9 @@ submitBtn.addEventListener('click', () => {
     thanksModalText.innerHTML = 'Ваша заявка принята!'
 
     setTimeout(() => {
-        overlayOrderModal.classList.toggle('overlay--active')
-        thanksModal.classList.toggle('thanks-modal--active')
-    }, 3500)
+        overlayOrderModal.classList.remove('overlay--active')
+        thanksModal.classList.remove('thanks-modal--active')
+    }, 6000)
     
 
 })
@@ -87,5 +90,61 @@ connectionSubmitButton.addEventListener('click', () => {
     setTimeout(() => {
         thanksModal.classList.remove('thanks-modal--active')
         overlayOrderModal.classList.remove('overlay--active')
-    }, 1500)
+    }, 6000)
+})
+
+// Parallax image
+const parallaxWrapper = document.querySelector('.parallax-wrapper')
+const parallaxImage = document.querySelector('.parallax-image')
+
+console.log(parallaxWrapper, parallaxImage)
+
+function parallaxHandler(evt) {
+    const clientX = evt.clientX
+    const clientY = evt.clientY
+  
+    const parallaxLeftOffset = parallaxWrapper.getBoundingClientRect().left
+    const parallaxTopOffset = parallaxWrapper.getBoundingClientRect().top
+    const coordX = clientX - parallaxLeftOffset - parallaxWrapper.offsetWidth * 0.5
+    const coordY = clientY - parallaxTopOffset - parallaxWrapper.offsetHeight * 0.5
+
+    const imageSpeed = parallaxImage.dataset.speed
+    const x = - (coordX * imageSpeed).toFixed(2)
+    const y = - (coordY * imageSpeed).toFixed(2)
+    parallaxImage.setAttribute('style', `transform: translate(${x}px, ${y}px);`)
+}
+
+const reset = () => {
+    parallaxImage.removeAttribute('style')
+}
+
+parallaxWrapper.addEventListener('mousemove', parallaxHandler)
+parallaxWrapper.addEventListener('mouseout', reset)
+
+// SELECT
+const selectSingleList = document.querySelectorAll('.__select')
+const selectSingleTitleList = document.querySelectorAll('.__select__title')
+const selectSingleLabelsList = document.querySelectorAll('.__select__label')
+
+let activeTitle = null
+
+// Toggle menu
+selectSingleTitleList.forEach((title, index) => {
+    title.addEventListener('click', () => {
+        if ('active' === selectSingleList[index].getAttribute('data-state')) {
+            selectSingleList[index].setAttribute('data-state', '')
+            activeTitle = null
+        } else {
+            selectSingleList[index].setAttribute('data-state', 'active')
+            activeTitle = index
+        }
+      })
+})
+
+selectSingleLabelsList.forEach((label, index) => {
+    label.addEventListener('click', (evt) => {
+        selectSingleTitleList[activeTitle].innerHTML = evt.target.innerHTML;
+        selectSingleList[activeTitle].setAttribute('data-state', '')
+        console.log(selectSingleTitleList[index])
+    })
 })

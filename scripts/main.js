@@ -1,6 +1,6 @@
 const orderModal = document.querySelector('.order-modal')
 const submitBtn = orderModal.querySelector('.primary-btn')
-const closeBtn = orderModal.querySelector('.close-button')
+const closeBtns = document.querySelectorAll('.close-button')
 const overlayOrderModal = document.querySelector('.overlay')
 
 const headerNav = document.querySelector('.header-nav')
@@ -15,9 +15,12 @@ const footerOrderButton = footer.querySelector('.primary-btn')
 const mFooter = document.querySelector('.footer--mobile')
 const mFooterOrderButton = mFooter.querySelector('.primary-btn')
 
-closeBtn.addEventListener('click', () => {
-    orderModal.classList.toggle('order-modal--active')
-    overlayOrderModal.classList.toggle('overlay--active')
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        orderModal.classList.remove('order-modal--active')
+        overlayOrderModal.classList.remove('overlay--active')
+        thanksModal.classList.remove('thanks-modal--active')
+    })
 })
 
 orderButton.addEventListener('click', () => {
@@ -31,9 +34,9 @@ submitBtn.addEventListener('click', () => {
     thanksModalText.innerHTML = 'Ваша заявка принята!'
 
     setTimeout(() => {
-        overlayOrderModal.classList.toggle('overlay--active')
-        thanksModal.classList.toggle('thanks-modal--active')
-    }, 3500)
+        overlayOrderModal.classList.remove('overlay--active')
+        thanksModal.classList.remove('thanks-modal--active')
+    }, 6000)
     
 
 })
@@ -56,8 +59,9 @@ const mOrderButton = menuHidden.querySelector('.primary-btn')
 const menuHiddenItems = document.querySelectorAll('.menu-hidden__link')
 
 menuHiddenItems.forEach(item => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
         menuHidden.classList.toggle('menu-hidden--active')
+        console.log(item.href)
     })
 })
 burgerBtn.addEventListener('click', () => {
@@ -81,7 +85,7 @@ connectionSubmitButton.addEventListener('click', () => {
     setTimeout(() => {
         thanksModal.classList.remove('thanks-modal--active')
         overlayOrderModal.classList.remove('overlay--active')
-    }, 1500)
+    }, 6000)
 })
 
 

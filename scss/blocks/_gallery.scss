@@ -1,4 +1,5 @@
 #gallery-section {
+    position: relative;
     padding: 100px 0 103px 0;
     background: url(../img/main-page/gallery-bg.jpg) 50%/cover no-repeat;
     @media (max-width: 1250px) {
@@ -7,6 +8,66 @@
     @media (max-width: 767px) {
         padding: 20px 0 80px 0;
     }
+    .button-prev {
+        @include slider-button;
+        top: calc(50% + 24px);
+        left: calc(50% - 585px - 80px);
+        .arrow-prev {      
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            &::after {
+                position: absolute;
+                top: calc(50% - 8px);
+                left: calc(50% - 8px);
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-left: 3px solid $dark;
+                border-bottom: 3px solid $dark;
+                transform: rotate(45deg);
+            }
+        }
+        @media (max-width: 1380px) {
+            top: calc(100% - 40px - 24px);
+            left: calc(50% - 15px - 24px);
+        }
+        @media (max-width: 650px) {
+            top: calc(100% - 20px - 24px);
+            left: calc(50% - 15px - 24px);
+        }
+    }
+    .button-next {
+        @include slider-button;
+        top: calc(50% + 24px);
+        right: calc(50% - 585px - 80px);
+        &::after {
+            position: absolute;
+            top: calc(50% - 8px);
+            left: calc(50% - 8px);
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-right: 3px solid $dark;
+            border-bottom: 3px solid $dark;
+            transform: rotate(-45deg);
+            &:active {
+                border-right: 3px solid $green;
+                border-bottom: 3px solid $green;
+            }
+        }
+        @media (max-width: 1380px) {
+            top: calc(100% - 40px - 24px);
+            left: calc(50% + 15px + 24px);
+        }
+        @media (max-width: 650px) {
+            top: calc(100% - 20px - 24px);
+            left: calc(50% + 15px + 24px);
+        }
+    }
     .gallery {
         .section-title {
             margin-bottom: 50px;
@@ -14,11 +75,13 @@
                 margin-bottom: 20px;
             }
         }
+
         .swiper {
+            
             .swiper-wrapper {
 
                 .swiper-slide {
-                    
+    
                     .slide-top, .slide-bottom {
                         display: flex;
                         gap: 30px;
