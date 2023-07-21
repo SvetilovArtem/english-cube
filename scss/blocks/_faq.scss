@@ -22,7 +22,7 @@
                     font-size: 24px;
                     font-weight: 500;
                     line-height: 170%;
-                    border-bottom: 1px solid rgba(17, 137, 36, 0.22);
+ 
                     padding: 17px 0;
                     @media (max-width: 1250px) {
                         padding: 11px 0;
@@ -67,6 +67,9 @@
                         }
                     }
 
+                }
+                .active {
+                    border-bottom: none;
                 }
                 .faq-item_answer {
                     font-size: 20px;

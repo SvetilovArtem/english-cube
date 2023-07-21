@@ -9,12 +9,13 @@ acc.forEach((item, index) => {
 
     item.addEventListener('click', () => {
         panel.classList.toggle("active");
-        titles[index].classList.toggle("active");
 
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
+            titles[index].classList.remove("active");
           } else {
             panel.style.maxHeight = panel.scrollHeight+ paddingBottom + paddingTop + "px";
+            titles[index].classList.add("active");
           }
     })
 })

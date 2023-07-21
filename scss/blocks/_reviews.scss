@@ -10,7 +10,7 @@
     }
     .reviews-button-prev {
         @include slider-button;
-        top: calc(50% + 24px);
+        top: calc(50% + 48px);
         left: calc(50% - 585px - 80px);
         .arrow-prev {      
             position: relative;
@@ -31,17 +31,17 @@
             }
         }
         @media (max-width: 1380px) {
-            top: calc(100% - 80px - 24px);
-            left: calc(50% - 15px - 24px);
+            top: calc(100% - 80px - 48px);
+            left: calc(50% - 15px - 48px);
         }
         @media (max-width: 650px) {
-            top: calc(100% - 88px - 24px);
-            left: calc(50% - 15px - 24px);
+            top: calc(100% - 80px - 48px);
+
         }
     }
     .reviews-button-next {
         @include slider-button;
-        top: calc(50% + 24px);
+        top: calc(50% + 48px);
         right: calc(50% - 585px - 80px);
         &::after {
             position: absolute;
@@ -60,12 +60,12 @@
             }
         }
         @media (max-width: 1380px) {
-            top: calc(100% - 80px - 24px);
-            left: calc(50% + 15px + 24px);
+            top: calc(100% - 80px - 48px);
+            right: calc(50% - 15px - 48px);
         }
         @media (max-width: 650px) {
-            top: calc(100% - 88px - 24px);
-            left: calc(50% + 15px + 24px);
+            top: calc(100% - 80px - 48px);
+
         }
     }
     .reviews {
@@ -104,15 +104,28 @@
                         margin-bottom: 14px;
                     }
                     .review-author__avatar {
-                        border: 6px solid transparent;
-                        border-radius: 50%;
                         width: 105px;
                         height: 105px;
+                        border-radius: 50%;
+                        background-position: 50%;
+                        background-repeat: no-repeat;
+                        background-size: 97px, 105px;
+                        margin-right: 22px;
                         @media (max-width: 1250px) {
+                            margin-right: 13px;
                             width: 65px;
                             height: 65px;
-                            margin-right: 14px;
+                            background-size: 62px, 65px;
                         }
+                    }
+                    .review-author__avatar-1 {
+                        background-image: url(../icons/main-page/photo-frame.svg), url(../icons/main-page/reviewer-1.svg);
+                    }
+                    .review-author__avatar-2 {
+                        background-image: url(../icons/main-page/photo-frame.svg), url(../icons/main-page/reviewer-2.svg);
+                    }
+                    .review-author__avatar-3 {
+                        background-image: url(../icons/main-page/photo-frame.svg), url(../icons/main-page/reviewer-3.svg);
                     }
                     .review-author__info {
                         .review-author__name {

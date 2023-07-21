@@ -31,12 +31,12 @@
             }
         }
         @media (max-width: 1380px) {
-            left: calc(50% - 15px - 24px);
+            left: calc(50% - 15px - 48px);
             top: calc(100% - 48px - 40px);
         }
         @media (max-width: 767px) {
             top: calc(100% - 48px - 20px);
-            left: calc(50% - 15px - 24px);
+            left: calc(50% - 48px - 15px);
         }
     }
     .button-next {
@@ -60,14 +60,12 @@
             }
         }
         @media (max-width: 1380px) {
-            // top: calc(100% - 40px - 24px);
-            left: calc(50% + 15px + 24px);
+            right: calc(50% - 15px - 48px);
             top: calc(100% - 48px - 40px);
         }
         @media (max-width: 767px) {
-            // top: calc(100% - 20px - 24px);
             top: calc(100% - 48px - 20px);
-            left: calc(50% + 15px + 24px);
+
         }
     }
     .gallery {
