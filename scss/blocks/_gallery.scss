@@ -31,11 +31,11 @@
             }
         }
         @media (max-width: 1380px) {
-            top: calc(100% - 40px - 24px);
             left: calc(50% - 15px - 24px);
+            top: calc(100% - 48px - 40px);
         }
-        @media (max-width: 650px) {
-            top: calc(100% - 20px - 24px);
+        @media (max-width: 767px) {
+            top: calc(100% - 48px - 20px);
             left: calc(50% - 15px - 24px);
         }
     }
@@ -60,11 +60,13 @@
             }
         }
         @media (max-width: 1380px) {
-            top: calc(100% - 40px - 24px);
+            // top: calc(100% - 40px - 24px);
             left: calc(50% + 15px + 24px);
+            top: calc(100% - 48px - 40px);
         }
-        @media (max-width: 650px) {
-            top: calc(100% - 20px - 24px);
+        @media (max-width: 767px) {
+            // top: calc(100% - 20px - 24px);
+            top: calc(100% - 48px - 20px);
             left: calc(50% + 15px + 24px);
         }
     }

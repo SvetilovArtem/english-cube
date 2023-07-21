@@ -173,7 +173,10 @@
         .swiper {
             margin-bottom: 20px;
             @media (max-width: 1250px) {
-                margin-bottom: 71px;
+                margin-bottom: 72px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 80px;
             }
         }
     }

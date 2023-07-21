@@ -1505,6 +1505,10 @@ img {
 #teachers-section .teacher-slide .teacher-about .teacher-benefits .teacher-benefit .teacher-benefit__descr {
   text-align: center;
   font-size: 13px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 1250px) {
   #teachers-section .desktop {
@@ -1559,10 +1563,15 @@ img {
 #teachers-section .mobile .teacher-benefits .teacher-benefit .teacher-benefit__descr {
   text-align: center;
   font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   #teachers-section .mobile .teacher-benefits .teacher-benefit .teacher-benefit__descr {
     font-size: 10px;
+    height: 24px;
+    line-height: 12px;
   }
 }
 @media (max-width: 1250px) {
@@ -1877,13 +1886,13 @@ img {
 }
 @media (max-width: 1380px) {
   #gallery-section .button-prev {
-    top: calc(100% - 40px - 24px);
     left: calc(50% - 15px - 24px);
+    top: calc(100% - 48px - 40px);
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 767px) {
   #gallery-section .button-prev {
-    top: calc(100% - 20px - 24px);
+    top: calc(100% - 48px - 20px);
     left: calc(50% - 15px - 24px);
   }
 }
@@ -1921,13 +1930,13 @@ img {
 }
 @media (max-width: 1380px) {
   #gallery-section .button-next {
-    top: calc(100% - 40px - 24px);
     left: calc(50% + 15px + 24px);
+    top: calc(100% - 48px - 40px);
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 767px) {
   #gallery-section .button-next {
-    top: calc(100% - 20px - 24px);
+    top: calc(100% - 48px - 20px);
     left: calc(50% + 15px + 24px);
   }
 }
@@ -2219,7 +2228,12 @@ img {
 }
 @media (max-width: 1250px) {
   #reviews-section .reviews .swiper {
-    margin-bottom: 71px;
+    margin-bottom: 72px;
+  }
+}
+@media (max-width: 767px) {
+  #reviews-section .reviews .swiper {
+    margin-bottom: 80px;
   }
 }
 
