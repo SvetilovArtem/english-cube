@@ -140,12 +140,20 @@
         background: #FFF;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 11px 17px 19px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
         .footer-bottom {
             font-size: 10px;
             line-height: 12px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            // align-items: center;
             .primary-btn {
                 margin: 0 auto;
                 padding: 8px 12px;
@@ -166,7 +174,7 @@
             display: flex;
             box-shadow: none;
             border: none;
-            justify-content: center;
+            justify-content:start;
             .footer-logo {
                 width: 30px;
                 height: 32px;
