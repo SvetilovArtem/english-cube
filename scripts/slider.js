@@ -15,3 +15,12 @@ const swiper = new Swiper('.gallery-swiper', {
       prevEl: '.reviews-button-prev',
     },
   });
+
+const teachersSwiper = new Swiper('.teachers-swiper', {
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.teachers-button-next',
+    prevEl: '.teachers-button-prev',
+  },
+});

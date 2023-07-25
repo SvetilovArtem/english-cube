@@ -56,7 +56,8 @@ img {
     }
     @media (max-width: 1250px) {
         padding: 8px 11px;
-        font-size: 12px;
+        font-size: 10px;
+        line-height: 12px;
     }
     @media (max-width: 420px) {
         padding: 14px 16px;
@@ -65,9 +66,6 @@ img {
     }
 }
 
-.material-symbols-outlined {
-
-}
 .material-symbols-rounded {
 
   font-variation-settings:

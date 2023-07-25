@@ -87,6 +87,7 @@
                     line-height: 1;
                     @media (max-width: 1250px) {
                         font-size: 15px;
+                        gap: 2px;
                     }
                     .contacts-social {
                         width: 48px;
@@ -136,6 +137,10 @@
                 .company {
                     @media (max-width: 1250px) {
                         font-size: 14px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                        line-height: 12px;
                     }
                     .company-name {
                         margin-bottom: 10px;

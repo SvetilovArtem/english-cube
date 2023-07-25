@@ -153,7 +153,8 @@ img {
 @media (max-width: 1250px) {
   .primary-btn {
     padding: 8px 11px;
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 @media (max-width: 420px) {
@@ -1310,6 +1311,7 @@ img {
 }
 
 #teachers-section {
+  position: relative;
   padding: 100px 0 93px 0;
   background: url(../img/main-page/checkered-sheet.jpg) 50%/cover no-repeat;
 }
@@ -1321,6 +1323,95 @@ img {
 @media (max-width: 767px) {
   #teachers-section {
     padding: 20px 0 81px 0;
+  }
+}
+#teachers-section .teachers-button-prev {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  z-index: 15;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 1px 4px 16px 0px rgba(34, 60, 80, 0.2);
+  background-color: #fff;
+  top: calc(50% + 24px);
+  left: calc(50% - 585px - 80px);
+}
+#teachers-section .teachers-button-prev:hover {
+  transform: scale(1.07);
+}
+#teachers-section .teachers-button-prev .arrow-prev {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#teachers-section .teachers-button-prev .arrow-prev::after {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(45deg);
+}
+@media (max-width: 1380px) {
+  #teachers-section .teachers-button-prev {
+    left: calc(50% - 15px - 48px);
+    top: calc(100% - 48px - 40px);
+  }
+}
+@media (max-width: 767px) {
+  #teachers-section .teachers-button-prev {
+    top: calc(100% - 48px - 20px);
+    left: calc(50% - 48px - 15px);
+  }
+}
+#teachers-section .teachers-button-next {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  z-index: 15;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 1px 4px 16px 0px rgba(34, 60, 80, 0.2);
+  background-color: #fff;
+  top: calc(50% + 24px);
+  right: calc(50% - 585px - 80px);
+}
+#teachers-section .teachers-button-next:hover {
+  transform: scale(1.07);
+}
+#teachers-section .teachers-button-next::after {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(-45deg);
+}
+#teachers-section .teachers-button-next::after:active {
+  border-right: 3px solid #006837;
+  border-bottom: 3px solid #006837;
+}
+@media (max-width: 1380px) {
+  #teachers-section .teachers-button-next {
+    right: calc(50% - 15px - 48px);
+    top: calc(100% - 48px - 40px);
+  }
+}
+@media (max-width: 767px) {
+  #teachers-section .teachers-button-next {
+    top: calc(100% - 48px - 20px);
   }
 }
 #teachers-section .teachers .section-title {
@@ -1486,11 +1577,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 10px;
 }
 #teachers-section .teacher-slide .teacher-about .teacher-benefits .teacher-benefit .teacher-benefit__number {
   font-size: 13px;
-  margin-bottom: 11px;
 }
 #teachers-section .teacher-slide .teacher-about .teacher-benefits .teacher-benefit .teacher-benefit__number span {
   font-weight: 500;
@@ -1544,6 +1635,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 7px;
 }
 #teachers-section .mobile .teacher-benefits .teacher-benefit .teacher-benefit__number {
@@ -1806,10 +1898,12 @@ img {
 #methodics-section .methodics .methodics-list .methodics-item .methodics-item__img {
   border-radius: 10px;
   margin-bottom: 12px;
+  max-height: 270px;
 }
 @media (max-width: 767px) {
   #methodics-section .methodics .methodics-list .methodics-item .methodics-item__img {
     margin-bottom: 8px;
+    max-height: 210px;
   }
 }
 #methodics-section .methodics .methodics-list .methodics-item .methodics-item__desc {
@@ -2150,7 +2244,7 @@ img {
   border-radius: 50%;
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: 97px, 105px;
+  background-size: 105px;
   margin-right: 22px;
 }
 @media (max-width: 1250px) {
@@ -2158,17 +2252,17 @@ img {
     margin-right: 13px;
     width: 65px;
     height: 65px;
-    background-size: 62px, 65px;
+    background-size: 65px;
   }
 }
 #reviews-section .reviews .reviews-slide .review .review-author .review-author__avatar-1 {
-  background-image: url(../icons/main-page/photo-frame.svg), url(../icons/main-page/reviewer-1.svg);
+  background-image: url(../icons/main-page/reviewer_with_frame-1.svg);
 }
 #reviews-section .reviews .reviews-slide .review .review-author .review-author__avatar-2 {
-  background-image: url(../icons/main-page/photo-frame.svg), url(../icons/main-page/reviewer-2.svg);
+  background-image: url(../icons/main-page/reviewer_with_frame-2.svg);
 }
 #reviews-section .reviews .reviews-slide .review .review-author .review-author__avatar-3 {
-  background-image: url(../icons/main-page/photo-frame.svg), url(../icons/main-page/reviewer-3.svg);
+  background-image: url(../icons/main-page/reviewer_with_frame-3.svg);
 }
 #reviews-section .reviews .reviews-slide .review .review-author .review-author__info .review-author__name {
   margin-bottom: 9px;
@@ -2183,11 +2277,13 @@ img {
 }
 #reviews-section .reviews .reviews-slide .review .review-author .review-author__info .review-author__child {
   font-size: 14px;
+  max-width: 190px;
 }
 @media (max-width: 1250px) {
   #reviews-section .reviews .reviews-slide .review .review-author .review-author__info .review-author__child {
     font-size: 8px;
     line-height: 10px;
+    max-width: 118px;
   }
 }
 #reviews-section .reviews .reviews-slide .review .review-rating {
@@ -2799,6 +2895,7 @@ img {
 @media (max-width: 1250px) {
   #contacts-section .contacts .contacts-wrapper .contacts-wrapper__left .contacts-item__content {
     font-size: 15px;
+    gap: 2px;
   }
 }
 #contacts-section .contacts .contacts-wrapper .contacts-wrapper__left .contacts-item__content .contacts-social {
@@ -2851,6 +2948,12 @@ img {
 @media (max-width: 1250px) {
   #contacts-section .contacts .contacts-wrapper .contacts-wrapper__right .company {
     font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  #contacts-section .contacts .contacts-wrapper .contacts-wrapper__right .company {
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 #contacts-section .contacts .contacts-wrapper .contacts-wrapper__right .company .company-name {
@@ -2983,6 +3086,13 @@ img {
 }
 #footer .footer--desktop .footer-bottom {
   padding: 80px 0 38px 0;
+}
+@media (max-width: 1250px) {
+  #footer .footer--desktop .footer-bottom {
+    padding: 14px 0 22px 0;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 #footer .footer--desktop .footer-bottom .footer-bottom__info {
   display: grid;
@@ -3748,7 +3858,7 @@ img {
   #methodics .methodics-wrapper .methodic .methodic-img {
     margin-right: 0;
     width: 280px;
-    height: 175px;
+    height: 190px;
     margin-bottom: 12px;
   }
 }
@@ -3821,6 +3931,7 @@ img {
 @media (max-width: 650px) {
   .reviews-page .primary-btn--review {
     margin-bottom: 20px;
+    padding: 8px 12px;
   }
 }
 .reviews-page #reviews-header {
@@ -4612,6 +4723,14 @@ img {
 .reviews-page .reviews-section .pagination .pagination-btn:nth-child(5) {
   display: flex;
 }
+.reviews-page .reviews-section .pagination .pagination-btn:nth-child(5) {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  width: 11px;
+  height: 20px;
+  align-self: end;
+}
 .reviews-page .add-review .add-form {
   padding: 50px;
   border-radius: 10px;
@@ -4764,15 +4883,14 @@ img {
   width: 370px;
   cursor: pointer;
 }
+.reviews-page .add-review .add-form .form-bottom .raiting-block .raiting-block__title {
+  width: 100%;
+}
 .reviews-page .add-review .add-form .form-bottom .raiting-block .reviewer-rating {
   display: flex;
   justify-content: start;
   flex-direction: row-reverse;
-}
-@media (max-width: 1250px) {
-  .reviews-page .add-review .add-form .form-bottom .raiting-block {
-    width: 334px;
-  }
+  width: 100%;
 }
 @media (max-width: 767px) {
   .reviews-page .add-review .add-form .form-bottom .raiting-block {
@@ -5671,7 +5789,7 @@ img {
   }
 }
 .programs-page .programs-section .programs-cards .programs-card .programs-descriptions .programs-description {
-  font-weight: 500;
+  font-weight: 400;
   padding-left: 20px;
   position: relative;
 }
@@ -5783,14 +5901,14 @@ img {
 .programs-page .programs-section .programs-cards .programs-card .programs-forms .programs-forms__list .programs-forms__item .programs-forms__name {
   text-align: center;
   margin-bottom: 4px;
-  font-weight: 500;
+  font-weight: 600;
   height: 48px;
   display: flex;
   align-items: center;
 }
 @media (max-width: 1250px) {
   .programs-page .programs-section .programs-cards .programs-card .programs-forms .programs-forms__list .programs-forms__item .programs-forms__name {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 22px;
     margin-bottom: 21px;
     height: 44px;
@@ -5844,7 +5962,7 @@ img {
 }
 @media (max-width: 650px) {
   .programs-page .programs-section .programs-cards .programs-card .programs-forms .programs-forms__list .programs-forms__item .programs-forms__price {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 15px;
     margin-bottom: 7px;
   }
@@ -5860,7 +5978,7 @@ img {
 }
 @media (max-width: 650px) {
   .programs-page .programs-section .programs-cards .programs-card .programs-forms .programs-forms__list .programs-forms__item .programs-forms__total {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 15px;
     margin-bottom: 17px;
   }
@@ -5890,15 +6008,18 @@ img {
   flex-direction: column;
   align-items: center;
   padding-top: 108px;
+  padding-bottom: 40px;
 }
 @media (max-width: 1250px) {
   .error-page {
     padding-top: 198px;
+    padding-bottom: 40px;
   }
 }
 @media (max-width: 450px) {
   .error-page {
     padding-top: 113px;
+    padding-bottom: 40px;
   }
 }
 .error-page .error-img {

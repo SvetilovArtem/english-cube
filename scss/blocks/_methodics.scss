@@ -35,8 +35,10 @@
                 .methodics-item__img {
                     border-radius: 10px;
                     margin-bottom: 12px;
+                    max-height: 270px;
                     @media (max-width: 767px) {
                         margin-bottom: 8px;
+                        max-height: 210px;
                     }
                 }
                 .methodics-item__desc {

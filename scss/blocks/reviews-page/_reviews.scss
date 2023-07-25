@@ -17,6 +17,7 @@
         }
         @media (max-width: 650px) {
             margin-bottom: 20px;
+            padding: 8px 12px;
         }
     }
     #reviews-header {
@@ -223,6 +224,14 @@
             .pagination-btn:nth-child(5) {
                 display: flex;
             }
+            .pagination-btn:nth-child(5) {
+                background-color: transparent;
+                box-shadow: none;
+                border: none;
+                width: 11px;
+                height: 20px;
+                align-self: end;
+            }
         }
     }
     .add-review {
@@ -345,16 +354,17 @@
                 .raiting-block {
                     width: 370px;
                     cursor: pointer;
+                    .raiting-block__title {
+                        width: 100%;
+                    }
                     .reviewer-rating {
-                        // label {
-                        //     color: $orange;
-                        // }
                         display: flex;
                         justify-content: start;
                         flex-direction: row-reverse;
+                        width: 100%;
                     }
                     @media (max-width: 1250px) {
-                        width: 334px;
+                        
                     }
                     @media (max-width: 767px) {
                         width: 100%;  
