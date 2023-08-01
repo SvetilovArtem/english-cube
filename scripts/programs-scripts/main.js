@@ -16,7 +16,7 @@ const cubes = document.querySelectorAll('.programs-card')
 const enrollModal = document.querySelector('.enroll-modal')
 const enrollSubmitBtn = enrollModal.querySelector('.primary-btn')
 
-enrollSubmitBtn.addEventListener('click', () => {
+enrollSubmitBtn.addEventListener('click', (e) => {
     enrollModal.classList.toggle('enroll-modal--active')
     thanksModal.classList.toggle('thanks-modal--active')
     thanksModalText.innerHTML = 'Ваша заявка принята!'
@@ -32,11 +32,13 @@ cubes.forEach((cube, index) => {
     const programAppointments = cube.querySelectorAll('.programs-card__text')
     const programsForms = cube.querySelectorAll('.programs-forms__name')
     enrollButtons.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
             const programName = document.querySelector('.program-name')
             const programNameTitle = document.querySelector('.program-name__title')
             const programNameGroup = document.querySelector('.program-name__group')
             const overlay = document.querySelector('.overlay')
+
+            enrollModal.style.top = (window.pageYOffset + 120) + 'px'
 
             programName.innerHTML = programs[0]?.textContent
             programNameTitle.innerHTML = programAppointments[0]?.textContent
