@@ -104,7 +104,14 @@ const reviewsData = [
         rating: 5,
         answer: 'Спасибо большое, что выбрали нашу студию английского языка для детей!'
     },
-
+    {
+        id: 4,
+        reviewer: 'Василевская Ирина',
+        child: 'Дочь Василевская Милана (7 лет)',
+        text: 'Лучшая студия английского языка в Минске! Профессиональные педагоги, игровая методика, подарки детям за хорошую учёбу! А главное — виден результат, ребёнок читает, знает много слов, строит простые предложения и всегда бежит на занятия',
+        rating: 5,
+        answer: 'Спасибо большое, что выбрали нашу студию английского языка для детей!'
+    },
 ]
 
 const reviews = document.querySelector('.reviews-list')
@@ -125,6 +132,10 @@ function createReviewCard(authorName, authorChild, authorText, rating, answer) {
 
     const  avatar = document.createElement('div')
     avatar.classList.add('avatar')
+    const numImg = Math.round(Math.random() * 2) + 1
+
+    let backgroundImg = `url(./icons/main-page/photo-frame.svg), url(./icons/main-page/reviewer-${numImg}.svg)`
+    avatar.style.backgroundImage = backgroundImg
 
     const author = document.createElement('div')
     author.classList.add('author')
@@ -174,6 +185,7 @@ function createReviewCard(authorName, authorChild, authorText, rating, answer) {
 
     const  avatarAns = document.createElement('div')
     avatarAns.classList.add('avatar')
+    avatarAns.style.backgroundImage = 'url(./icons/main-page/photo-frame.svg), url(./icons/main-page/english-cube-logo.svg)'
 
     const authorAns = document.createElement('div')
     authorAns.classList.add('author')
