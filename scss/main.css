@@ -1535,6 +1535,7 @@ img {
 }
 #teachers-section .teacher-slide .teacher-about {
   max-width: 769px;
+  flex-grow: 1;
 }
 @media (max-width: 1250px) {
   #teachers-section .teacher-slide .teacher-about {

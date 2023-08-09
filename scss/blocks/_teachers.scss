@@ -12,7 +12,7 @@
         @include slider-button;
         top: calc(50% + 24px);
         left: calc(50% - 585px - 80px);
-        .arrow-prev {      
+        .arrow-prev {
             position: relative;
             display: block;
             width: 100%;
@@ -179,6 +179,7 @@
         }
         .teacher-about {
             max-width: 769px;
+            flex-grow: 1;
             @media (max-width: 1250px) {
                 max-width: 489px;
             }

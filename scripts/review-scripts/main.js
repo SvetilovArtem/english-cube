@@ -115,6 +115,7 @@ const reviewsData = [
 ]
 
 const reviews = document.querySelector('.reviews-list')
+const reviewItemAll = document.querySelectorAll('.review-item')
 
 function createReviewCard(authorName, authorChild, authorText, rating, answer) {
     const name = document.createElement('div')
