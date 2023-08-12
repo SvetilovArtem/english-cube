@@ -51,6 +51,7 @@ cubes.forEach((cube, index) => {
     closeButton.addEventListener('click', () => {
         overlayOrderModal.classList.remove('overlay--active')
         enrollModal.classList.remove('enroll-modal--active')
+        enrollModal.style.top = 0
     })
 })
 
